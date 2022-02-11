@@ -1,2 +1,2 @@
-# building an experiment with PsychoPy
+# Building an experiment with PsychoPy
 

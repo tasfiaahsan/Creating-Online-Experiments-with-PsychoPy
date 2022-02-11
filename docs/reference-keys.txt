@@ -2,3 +2,8 @@ down-the-rabbit-hole
 the-pool-of-tears
 a-caucus-race-and-a-long-tale
 overview
+building-an-experiment-with-psychopy
+setting-up-pavlovia
+setting-up-consent-form
+setting-up-recruitment-website
+integrating-everything-online
