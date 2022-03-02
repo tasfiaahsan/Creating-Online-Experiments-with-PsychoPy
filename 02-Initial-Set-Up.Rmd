@@ -7,7 +7,7 @@ We will be building our experiment in PsychoPy and then running them online on P
 
 To begin, install [PsychoPy](https://www.psychopy.org) on your computer. Once you have PsychoPy set up on your computer, we will begin setting up for [Pavlovia](https://www.pavlovia.org). You can also access Pavlovia directly from PsychoPy interface:
 
-knitr::include_graphics("images/logging-pavlovia.png",echo=FALSE)
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/logging-pavlovia.png")
 
 
 
