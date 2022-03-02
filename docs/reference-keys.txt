@@ -7,3 +7,5 @@ setting-up-pavlovia
 setting-up-consent-form
 setting-up-recruitment-website
 integrating-everything-online
+initial-set-up
+setting-up-psychopy-and-pavlovia
