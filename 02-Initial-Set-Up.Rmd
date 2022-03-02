@@ -1,17 +1,29 @@
-# Initial Set up
+# Initial Set Up
 
 ## Setting up PsychoPy and Pavlovia
 
 We will be building our experiment in PsychoPy and then running them online on Pavlovia. 
 
-To begin, install [PsychoPy](https://www.psychopy.org) on your computer. Once you have PsychoPy set up on your computer, we will begin setting up for [Pavlovia](https://www.pavlovia.org). You can also access Pavlovia directly from PsychoPy interface:
+To begin, install [PsychoPy](https://www.psychopy.org) on your computer. Once you have PsychoPy set up on your computer, we will begin setting up for [Pavlovia](https://www.pavlovia.org). You can also access Pavlovia directly from PsychoPy interface as shown below.
 
 ```{r, echo=FALSE, fig.cap="Accessing Pavlovia through PsychoPy."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/logging-pavlovia.png")
 ```
 
+Once you have gone to Pavlovia, create an account with your **yorku email**. York University has an institutional licensing with Pavlovia that allows you to run all your studies free of cost under your york email. 
 
+Once you've created your Pavlovia account, we'll link your computer to the Pavlovia reposotory through [gitlab](https://gitlab.pavlovia.org/) by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online. 
 
+To access your SSH key setup, log onto gitlab using your credentials, then go to __settings__ and click __SSH key__ from the left hand menu bar.
 
+```{r, echo=FALSE, fig.cap="Finding setting on gitlab."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/settings.png")
+```
+
+```{r, echo=FALSE, fig.cap="SSH key on gitlab setting."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh.png")
+```
+
+You can either generate a [new SSH key](https://gitlab.pavlovia.org/help/ssh/README#generating-a-new-ssh-key-pair) or use an [existing SSH key](https://gitlab.pavlovia.org/help/ssh/README#locating-an-existing-ssh-key-pair). I will breifly go over how to create your own below:
 
 
