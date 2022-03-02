@@ -9,3 +9,4 @@ setting-up-recruitment-website
 integrating-everything-online
 initial-set-up
 setting-up-psychopy-and-pavlovia
+fig:unnamed-chunk-1
