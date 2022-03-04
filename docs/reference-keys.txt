@@ -12,3 +12,7 @@ setting-up-psychopy-and-pavlovia
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
+fig:unnamed-chunk-4
+fig:unnamed-chunk-5
+setting-up-qualtrics
+section

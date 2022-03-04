@@ -24,6 +24,41 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh.png")
 ```
 
-You can either generate a [new SSH key](https://gitlab.pavlovia.org/help/ssh/README#generating-a-new-ssh-key-pair) or use an [existing SSH key](https://gitlab.pavlovia.org/help/ssh/README#locating-an-existing-ssh-key-pair). I will breifly go over how to create your own below:
+You can either generate a [new SSH key](https://gitlab.pavlovia.org/help/ssh/README#generating-a-new-ssh-key-pair) or use an [existing SSH key](https://gitlab.pavlovia.org/help/ssh/README#locating-an-existing-ssh-key-pair). I will summarize the instructions below for generating a new key. 
+
+Open up terminal on your computer and type this at the command prompt to generate a RSA key pair: 
+
+ssh-keygen -o -t rsa -b 4096 -C "example@email.com"
+
+For example:
+```{r, echo=FALSE, fig.cap="Command line for generating RSA key pair."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/rsakey_generating.png")
+```
+
+Press enter to choose the suggested path. Once the path is chosen, create a password (recommended), or press enter twice to skip creating a password. 
+
+Now that your key is generated, we will now add it to the gitlab account.
+
+First copy your public SSH key by typing in the comman below:
+
+**macOS:**
+pbcopy < ~/.ssh/id_ed25519.pub
+
+**WSL / GNU/Linux (requires the xclip package):**
+xclip -sel clip < ~/.ssh/id_ed25519.pub
+
+**Git Bash on Windows:**
+cat ~/.ssh/id_ed25519.pub | clip
+
+Once copied, paste it onto your gitlab account under SSH key.
+
+```{r, echo=FALSE, fig.cap="Command line for generating RSA key pair."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh_key_paste.png")
+```
+
+## Setting up Qualtrics
+At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.
 
 
+
+##
