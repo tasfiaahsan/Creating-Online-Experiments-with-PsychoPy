@@ -16,3 +16,7 @@ fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 setting-up-qualtrics
 section
+hosting-website-setting-up-psychopy-and-pavlovia
+survey-website-setting-up-qualtrics-for-demographics-and-consent-form
+recruitment-website-setting-up-urpp-and-prolific
+initial-setup
