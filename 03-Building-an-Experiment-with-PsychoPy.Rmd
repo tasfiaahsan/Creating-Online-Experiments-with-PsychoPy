@@ -50,5 +50,6 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/key_resp.png")
 ```
 
+## Linking Excel to Builder using a loop
 
 
