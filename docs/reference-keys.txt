@@ -50,3 +50,4 @@ consent-implementing-consent-form-into-psychopy-or-through-a-survey-website-like
 hosting-psychopy-and-pavlovia
 fig:unnamed-chunk-15
 fig:unnamed-chunk-16
+consent-setting-up-consent-form-through-psychopy-or-through-survey-website-i.e-qualtrics---recommended.

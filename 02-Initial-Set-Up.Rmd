@@ -56,7 +56,7 @@ Once copied, paste it onto your gitlab account under SSH key.
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh_key_paste.png")
 ```
 
-## **Consent:** Implementing consent form into PsychoPy or through a survey website like [Qualtrics](https://www.qualtrics.com/) (recommended).
+## **Consent:** setting up consent form through PsychoPy or through survey website (i.e, [Qualtrics](https://www.qualtrics.com/) - recommended).
 
 At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.
 
