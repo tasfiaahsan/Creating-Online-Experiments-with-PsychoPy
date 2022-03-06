@@ -79,7 +79,7 @@
 <li class="chapter" data-level="2.3" data-path="initial-setup.html"><a href="initial-setup.html#recruitment-website-setting-up-urpp-and-prolific"><i class="fa fa-check"></i><b>2.3</b> <strong>Recruitment Website:</strong> setting up <span>URPP</span> and <span>Prolific</span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html"><i class="fa fa-check"></i><b>3</b> Building an experiment with PsychoPy</a><ul>
-<li class="chapter" data-level="3.1" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html#we-will-be-using-the-psychopy-builder-to-create-the-posner-cuing-task-experiment."><i class="fa fa-check"></i><b>3.1</b> We will be using the PsychoPy Builder to create the Posner Cuing Task Experiment.</a></li>
+<li class="chapter" data-level="3.1" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html#using-psychopy-builder-to-create-the-posner-cuing-task"><i class="fa fa-check"></i><b>3.1</b> Using PsychoPy Builder to create the Posner Cuing Task</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="setting-up-consent-form.html"><a href="setting-up-consent-form.html"><i class="fa fa-check"></i><b>4</b> Setting up consent form</a></li>
 <li class="chapter" data-level="5" data-path="setting-up-recruitment-website.html"><a href="setting-up-recruitment-website.html"><i class="fa fa-check"></i><b>5</b> Setting up recruitment website</a></li>
@@ -105,11 +105,19 @@
             <section class="normal" id="section-">
 <div id="building-an-experiment-with-psychopy" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Building an experiment with PsychoPy</h1>
-<div id="we-will-be-using-the-psychopy-builder-to-create-the-posner-cuing-task-experiment." class="section level2">
-<h2><span class="header-section-number">3.1</span> We will be using the PsychoPy Builder to create the Posner Cuing Task Experiment.</h2>
+<div id="using-psychopy-builder-to-create-the-posner-cuing-task" class="section level2">
+<h2><span class="header-section-number">3.1</span> Using PsychoPy Builder to create the Posner Cuing Task</h2>
 <p><strong>Posner Cuing Task</strong>
 Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (congruent) or different place as the cue (incongruent). Participants will be asked to indicate whether they see the GO signal on the right or the left box by pressing S key for right and L key for left. There will be a total of 20 trials.</p>
-<p>PsychoPy builder uses excel/csv files to read condition va</p>
+<p>PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of the routines.</p>
+<p>To begin, we will start by creating the excel file of condtions. For this task, we have three condition variables: condition type (congruent, incongruent), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/ssh_key_paste.png" alt="Pasting SSH key onto gitlab."  />
+<p class="caption">
+Figure 3.1: Pasting SSH key onto gitlab.
+</p>
+</div>
+<p>PsychoPy reads the rows as one trial, and the column as a separate variable.</p>
 
 </div>
 </div>

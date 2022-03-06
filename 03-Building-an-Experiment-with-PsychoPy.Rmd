@@ -1,8 +1,18 @@
 # Building an experiment with PsychoPy
 
-## We will be using the PsychoPy Builder to create the Posner Cuing Task Experiment.
+## Using PsychoPy Builder to create the Posner Cuing Task
 
 **Posner Cuing Task**
 Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (congruent) or different place as the cue (incongruent). Participants will be asked to indicate whether they see the GO signal on the right or the left box by pressing S key for right and L key for left. There will be a total of 20 trials. 
 
-PsychoPy builder uses excel/csv files to read condition va
+PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of the routines. 
+
+To begin, we will start by creating the excel file of condtions. For this task, we have three condition variables: condition type (congruent, incongruent), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. 
+
+```{r, echo=FALSE, fig.cap="Pasting SSH key onto gitlab."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh_key_paste.png")
+```
+
+
+PsychoPy reads the rows as one trial, and the column as a separate variable. 
+
