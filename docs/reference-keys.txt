@@ -23,3 +23,8 @@ initial-setup
 using-builder-to
 we-will-be-using-the-psychopy-builder-to-create-the-posner-cuing-task-experiment.
 using-psychopy-builder-to-create-the-posner-cuing-task
+condition-file
+builder
+fig:unnamed-chunk-6
+fig:unnamed-chunk-7
+fig:unnamed-chunk-8

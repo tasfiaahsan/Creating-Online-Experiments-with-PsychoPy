@@ -24,7 +24,7 @@
 <meta name="author" content="Tasfia Ahsan" />
 
 
-<meta name="date" content="2022-03-04" />
+<meta name="date" content="2022-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,7 +79,10 @@
 <li class="chapter" data-level="2.3" data-path="initial-setup.html"><a href="initial-setup.html#recruitment-website-setting-up-urpp-and-prolific"><i class="fa fa-check"></i><b>2.3</b> <strong>Recruitment Website:</strong> setting up <span>URPP</span> and <span>Prolific</span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html"><i class="fa fa-check"></i><b>3</b> Building an experiment with PsychoPy</a><ul>
-<li class="chapter" data-level="3.1" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html#using-psychopy-builder-to-create-the-posner-cuing-task"><i class="fa fa-check"></i><b>3.1</b> Using PsychoPy Builder to create the Posner Cuing Task</a></li>
+<li class="chapter" data-level="3.1" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html#using-psychopy-builder-to-create-the-posner-cuing-task"><i class="fa fa-check"></i><b>3.1</b> Using PsychoPy Builder to create the Posner Cuing Task</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html#condition-file"><i class="fa fa-check"></i><b>3.1.1</b> Condition File</a></li>
+<li class="chapter" data-level="3.1.2" data-path="building-an-experiment-with-psychopy.html"><a href="building-an-experiment-with-psychopy.html#builder"><i class="fa fa-check"></i><b>3.1.2</b> Builder</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="setting-up-consent-form.html"><a href="setting-up-consent-form.html"><i class="fa fa-check"></i><b>4</b> Setting up consent form</a></li>
 <li class="chapter" data-level="5" data-path="setting-up-recruitment-website.html"><a href="setting-up-recruitment-website.html"><i class="fa fa-check"></i><b>5</b> Setting up recruitment website</a></li>
@@ -108,17 +111,73 @@
 <div id="using-psychopy-builder-to-create-the-posner-cuing-task" class="section level2">
 <h2><span class="header-section-number">3.1</span> Using PsychoPy Builder to create the Posner Cuing Task</h2>
 <p><strong>Posner Cuing Task</strong>
-Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (congruent) or different place as the cue (incongruent). Participants will be asked to indicate whether they see the GO signal on the right or the left box by pressing S key for right and L key for left. There will be a total of 20 trials.</p>
-<p>PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of the routines.</p>
-<p>To begin, we will start by creating the excel file of condtions. For this task, we have three condition variables: condition type (congruent, incongruent), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy.</p>
+Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="images/ssh_key_paste.png" alt="Pasting SSH key onto gitlab."  />
+<img src="images/posner_task.png" alt="Time duration for each component of posner task."  />
 <p class="caption">
-Figure 3.1: Pasting SSH key onto gitlab.
+Figure 3.1: Time duration for each component of posner task.
 </p>
 </div>
-<p>PsychoPy reads the rows as one trial, and the column as a separate variable.</p>
+<p>If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment.</p>
+<p>Before beginning, it’s helpful to know a little bit about how PsychoPy builder works.
+PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial.</p>
+<div id="condition-file" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Condition File</h3>
+<p>Let’s start by creating an excel file of condtions. For this task, we have three condition variables: condition type (valid, invalid), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. The positions are represented in the units <a href="https://www.psychopy.org/general/units.html">height</a>, which scales everything relative to height of the window (best for online experiments).</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/condition.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.2: Condition file for Posner Cuing Task.
+</p>
+</div>
+</div>
+<div id="builder" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Builder</h3>
+<p>Now that we have the condition file ready to go, we can create the other components of our routine through builder. Let’s break down the task into a timeline of events.</p>
+<strong>1. Fixation cross appears from 0s to end of trial</strong>
+We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to 0.09 height units.
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="images/fixation.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.3: Condition file for Posner Cuing Task.
+</p>
+</div>
+<strong>2. Two box appears 0.25s after fixation (start time 0.25s)</strong>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/left_square.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.4: Condition file for Posner Cuing Task.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/copy_right.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.5: Condition file for Posner Cuing Task.
+</p>
+</div>
+<strong>3. Cue appears 0.50s after box (start time 0.75s)</strong>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/fixation.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.6: Condition file for Posner Cuing Task.
+</p>
+</div>
+<strong>4. Target appears 0.10s after cue (start time 0.85s), target duration 2s or until response</strong>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="images/go.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.7: Condition file for Posner Cuing Task.
+</p>
+</div>
+<strong>5. Record response key to end trial</strong>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="images/key_resp.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.8: Condition file for Posner Cuing Task.
+</p>
+</div>
 
+</div>
 </div>
 </div>
             </section>
