@@ -1,6 +1,6 @@
 # Initial Setup
 
-## **Hosting Website:** setting up PsychoPy and Pavlovia
+## **Hosting:** setting up [PsychoPy](https://www.psychopy.org) and [Pavlovia]((https://www.pavlovia.org))
 
 We will be building our experiment in PsychoPy and then running them online on Pavlovia. 
 
@@ -56,12 +56,12 @@ Once copied, paste it onto your gitlab account under SSH key.
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh_key_paste.png")
 ```
 
-## **Survey Website:** setting up [Qualtrics](https://www.qualtrics.com/) for demographics and consent form
+## **Consent:** Implementing consent form into PsychoPy or through a survey website like [Qualtrics](https://www.qualtrics.com/) (recommended).
 
 At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.
 
 
-## **Recruitment Website:** setting up [URPP](https://yorku.sona-systems.com/) and [Prolific](https://www.prolific.co/)
+## **Recruitment:** setting up [URPP](https://yorku.sona-systems.com/) and [Prolific](https://www.prolific.co/)
 
 
 

@@ -39,3 +39,12 @@ fig:unnamed-chunk-13
 fig:unnamed-chunk-14
 create-the-posner-task-on-builder
 adding-practice-trials
+hosting-website-psychopy-and-pavlovia
+creating-an-experiment-on-psychopy-builder
+pushing-to-online-pavlovia
+pushing-experiment-online-to-pavlovia
+hosting-setting-up-psychopy-and-pavlovia
+consent-implementing-consent-form-into-psychopy-or-setting-up-a-survey-website-like-qualtrics-for-demographics-and-consent-form-recommended.
+recruitment-setting-up-urpp-and-prolific
+consent-implementing-consent-form-into-psychopy-or-through-a-survey-website-like-qualtrics-recommended.
+hosting-psychopy-and-pavlovia

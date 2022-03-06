@@ -1,6 +1,6 @@
-# Building an experiment with PsychoPy
+# Hosting: PsychoPy and Pavlovia
 
-## Create the Posner Task on Builder
+## Creating an experiment on PsychoPy Builder
 
 **Posner Cuing Task**
 Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials. 
@@ -56,7 +56,7 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 ```
 
 
-## Adding practice trials
+## Adding Practice Trials
 
 For online experiments, it's especially important to have practice trials to make sure your participants understand the task properly. Today we will be creating a practice trial that provides feedback after every trial, and doesn't let the participant continue to the actual trial until they've gotten atleast 2 correct answer.
 
@@ -83,3 +83,5 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 ```{r, echo=FALSE, fig.cap="text component to show feedback message"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/feedback_msg.png")
 ```
+
+## Pushing Experiment Online to Pavlovia
