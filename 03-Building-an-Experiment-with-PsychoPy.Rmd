@@ -1,6 +1,6 @@
 # Building an experiment with PsychoPy
 
-## Using PsychoPy Builder to create the Posner Cuing Task
+## Creating Posner Cuing Task with PsychoPy Builder
 
 **Posner Cuing Task**
 Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials. 
@@ -14,8 +14,8 @@ If you are familiar with PsychoPy builder then stop here and try to create the e
 Before beginning, it's helpful to know a little bit about how PsychoPy builder works. 
 PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial. 
 
-### Condition File
-Let's start by creating an excel file of condtions. For this task, we have three condition variables: condition type (valid, invalid), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. The positions are represented in the units [height](https://www.psychopy.org/general/units.html), which scales everything relative to height of the window (best for online experiments).
+### Excel
+Let's start by creating the condition file on excel. For this task, we have three condition variables: condition type (valid, invalid), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. The positions are represented in the units [height](https://www.psychopy.org/general/units.html), which scales everything relative to height of the window (best for online experiments).
 
 ```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/condition.png")
@@ -26,27 +26,27 @@ Now that we have the condition file ready to go, we can create the other compone
 
 **1. Fixation cross appears from 0s to end of trial**
 We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to 0.09 height units.
-```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
+```{r, echo=FALSE, fig.cap="Fixation cross properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/fixation.png")
 ```
 
 **2. Two box appears 0.25s after fixation (start time 0.25s)**
-```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
+```{r, echo=FALSE, fig.cap="Left square properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/left_square.png")
 ```
-```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
+```{r, echo=FALSE, fig.cap="Copying left square to create right square."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/copy_right.png")
 ```
 **3. Cue appears 0.50s after box (start time 0.75s)**
-```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
-knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/fixation.png")
+```{r, echo=FALSE, fig.cap="Cue image properties on builder."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/cue.png")
 ```
 **4. Target appears 0.10s after cue (start time 0.85s), target duration 2s or until response** 
-```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
+```{r, echo=FALSE, fig.cap="Go image properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/go.png")
 ```
 **5. Record response key to end trial**
-```{r, echo=FALSE, fig.cap="Condition file for Posner Cuing Task."}
+```{r, echo=FALSE, fig.cap="response key properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/key_resp.png")
 ```
 
