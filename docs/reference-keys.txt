@@ -48,3 +48,5 @@ consent-implementing-consent-form-into-psychopy-or-setting-up-a-survey-website-l
 recruitment-setting-up-urpp-and-prolific
 consent-implementing-consent-form-into-psychopy-or-through-a-survey-website-like-qualtrics-recommended.
 hosting-psychopy-and-pavlovia
+fig:unnamed-chunk-15
+fig:unnamed-chunk-16
