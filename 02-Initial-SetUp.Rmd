@@ -56,14 +56,23 @@ Once copied, paste it onto your gitlab account under SSH key.
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/ssh_key_paste.png")
 ```
 
-## **Consent:** setting up consent form through PsychoPy or through survey website (i.e, [Qualtrics](https://www.qualtrics.com/) - recommended).
+## **Consent:** setting up consent form through survey website (Qualtrics, Google Form).
 
-At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.
+[Qualtrics](https://www.qualtrics.com/): At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.
 
-
-## **Recruitment:** setting up [URPP](https://yorku.sona-systems.com/) and [Prolific](https://www.prolific.co/)
-
+[Google Forms](https://www.google.ca/forms/): Can be setup with any Google accounts
 
 
+## **Recruitment:** setting up recruitment websites (URPP and Prolific) 
+
+[URPP](https://yorku.sona-systems.com/): accessible to all graduate students through york email. 
+Cost of running studies = free
+
+[Prolific](https://www.prolific.co/) : need to create account and input money into account before running studies.
+Cost of running studies: to run 40 participants for a 20 minute study: ~£3.33 ($5.6 CAD) per participant. 
+
+```{r, echo=FALSE, fig.cap="Prolific cost breakdown."}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prolific_cost.png")
+```
 
 

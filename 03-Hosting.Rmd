@@ -9,7 +9,9 @@ Participants will see a fixation cross in the middle and one box to the right an
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/posner_task.png")
 ```
 
-If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment.
+If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment. 
+
+All resources of this experiment can be found [here](https://drive.google.com/drive/folders/1SrTXSM9n9Ot9OpjQYqxAGZwO3b4I9CQZ?usp=sharing), but to create the experiment yourself, you only need to download the images of the cue and go signal. 
 
 Before beginning, it's helpful to know a little bit about how PsychoPy builder works. 
 PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial. It's best to create a separate folder for the experiment to contain all parts together (excel file, images, psyexp file) for consistency of pathways. 
