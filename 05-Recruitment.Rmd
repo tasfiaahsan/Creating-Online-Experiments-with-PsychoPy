@@ -3,7 +3,7 @@ output:
   html_document: default
   pdf_document: default
 ---
-# **Recruitement:** recruiting participants and collecting data online
+# **Recruitment:** recruiting participants and collecting data online
 
 ## Recruiting from SONA: Undergraduate Research Participant Pool [URPP](https://yorku.sona-systems.com/)
 
