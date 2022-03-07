@@ -1,1 +1,44 @@
-# Recruitement: 
+# **Recruitement:** recruiting participants and collecting data online
+
+## Recruiting from SONA: Undergraduate Research Participant Pool ([URPP])(https://yorku.sona-systems.com/)
+
+We have set up all our websites separtely, now we will link all of them together using query strings. Query strings allow us to transfer Participant ID from one website to another. 
+
+### URPP --> Qualtrics --> Pavlovia --> URPP: Automatic Process
+
+Below are the steps required at each website to link everything together. 
+
+URPP:
+1. Create a new study in URPP
+2. Under 'Study URL: paste Qualtrics survey link ending in ?id=%SURVEY_CODE%. This will pass the URPP code to Qualtrics through the variable id. 
+```{r, echo=FALSE, fig.cap="URL ending, URPP"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/survey_code.png")
+```
+
+Qualtrics:
+1. Go onto URPP code, right click to open options and select default choices
+2. Add a new embedded data element, type in id as a variable and click insert. This will allow Qualtrics to recongize the Participant's ID as the variable id.
+```{r, echo=FALSE, fig.cap="embedded data field, Qualtrics"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/qualtrics_urpp.png")
+```
+4. Go to end of the survey, and add ?participant=${e://Field/id} at end of the URL of your experiment. This will rename the SONA and Qualtrics participant ID from 'id' to 'participant' so Pavlovia can recognize it. 
+```{r, echo=FALSE, fig.cap="URL ending, Qualtrics"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/qualtrics_urpp_end.png")
+```
+
+URPP:
+1. Go to study page and copy the link under 'Qualtrics Redirect to a URL'.
+2. Return to PsychoPy, and click on Experimenter Settings --> Online tab
+3. In 'Completed URL' enter the URPP link and change ${e://Field/id} with "+expInfo['participant']" This changes the participant ID variable from 'participant' back to 'id' so URPP can recognize it and give credit to the participant.  
+4. Don't forget to push the changes from PsychoPy to Pavlovia!
+
+```{r, echo=FALSE, fig.cap="URL ending, PsychoPy"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_psychopy.png")
+```
+
+## Recruiting from ([Prolific])(prolific.co)
+
+### Prolific --> Qualtrics --> Pavlovia --> Prolific: Automatic Process
+
+
+

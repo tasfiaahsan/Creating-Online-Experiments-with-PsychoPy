@@ -3,7 +3,7 @@ output:
   html_document: default
   pdf_document: default
 ---
-# Consent: implementing consent form and demographics
+# **Consent:** Implementing consent form and demographics 
 Below is the standard York University consent form template. We will be implementing this into our experiment today.
 
 >
@@ -35,7 +35,7 @@ Below is the standard York University consent form template. We will be implemen
 
 Sign into Qualtrics, Create a new project --> Survey
 
-1. The first question will set up the participant to input their unique identification number. For instance, participants coming from SONA would put in their URPP code. This would be important to identify the participant and in Chapter 6 we will make this an automated process (so participants don't have to type it in themselves).
+1. The first question will set up the participant to input their unique identification number (Participant ID). For instance, participants coming from SONA would put in their URPP code. This is important to annonymously keep track of participants and their data.
 
 ```{r, echo=FALSE, fig.cap="identification code, Qualtrics"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/Q1.png")
@@ -59,7 +59,7 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/Q4.png")
 ```
 
-At the end of the survey, we want to redirect the participant to the experiment. Select End of Survey --> Redirect to URL: paste the link of your experiment in the box below (will be edited in Chapter 6 for automatic crediting).
+At the end of the survey, we want to redirect the participant to the experiment. Select End of Survey --> Redirect to URL: paste the link of your experiment in the box below (will be edited in Chapter 5 for automatic crediting).
 
 ```{r, echo=FALSE, fig.cap="end of survey, Qualtrics"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/end_of_survey.png")

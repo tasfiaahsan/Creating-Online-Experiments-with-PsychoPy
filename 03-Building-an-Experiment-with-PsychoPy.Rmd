@@ -1,4 +1,4 @@
-# Hosting: PsychoPy and Pavlovia
+# **Hosting:** PsychoPy and Pavlovia
 
 ## Creating an experiment on PsychoPy Builder
 
