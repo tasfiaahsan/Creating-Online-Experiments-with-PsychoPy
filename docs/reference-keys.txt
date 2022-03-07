@@ -63,3 +63,5 @@ recruiting-from-sona-undergraduate-research-participant-pool-urpphttpsyorku.sona
 urpp-qualtrics-pavlovia-urpp-automatic-process
 recruiting-from-prolificprolific.co
 prolific-qualtrics-pavlovia-prolific-automatic-process
+recruiting-from-sona-undergraduate-research-participant-pool-urpp
+recruiting-from-prolific
