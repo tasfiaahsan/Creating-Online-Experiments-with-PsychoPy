@@ -1,8 +1,9 @@
-# **Hosting:**  PsychoPy and Pavlovia
+# **Building:**  PsychoPy Builder Interface
 
-## Building an experiment with PsychoPy Builder
+## Building the Posner Cuing Task experiment 
 
 **Posner Cuing Task**
+
 Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials. 
 
 ```{r, echo=FALSE, fig.cap="Time duration for each component of posner task."}
@@ -25,12 +26,15 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 Now that we have the condition file ready to go, we can create the other components of our routine through builder. Let's break down the task into a timeline of events.
 
 **1. Fixation cross appears from 0s to end of trial**
+
 We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to 0.09 height units.
+
 ```{r, echo=FALSE, fig.cap="Fixation cross properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/fixation.png")
 ```
 
 **2. Two box appears 0.25s after fixation (start time 0.25s)**
+
 ```{r, echo=FALSE, fig.cap="Left square properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/left_square.png")
 ```
@@ -38,25 +42,29 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/copy_right.png")
 ```
 **3. Cue appears 0.50s after box (start time 0.75s)**
+
 ```{r, echo=FALSE, fig.cap="Cue image properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/cue.png")
 ```
 **4. Target appears 0.10s after cue (start time 0.85s), target duration 2s or until response** 
+
 ```{r, echo=FALSE, fig.cap="Go image properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/go.png")
 ```
 **5. Record response key to end trial**
+
 ```{r, echo=FALSE, fig.cap="response key properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/key_resp.png")
 ```
 
 ### Linking Excel to Builder using a loop
+
 ```{r, echo=FALSE, fig.cap="Routine flow and loop on builder ."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/routine.png")
 ```
 
 
-### Adding Practice Trials
+## Adding Practice Trials
 
 For online experiments, it's especially important to have practice trials to make sure your participants understand the task properly. Today we will be creating a practice trial that provides feedback after every trial, and doesn't let the participant continue to the actual trial until they've gotten atleast 2 correct answer.
 
@@ -84,9 +92,9 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/feedback_msg.png")
 ```
 
-### Adding instructions, transition and goodbye screen
+## Adding instructions, transition and goodbye screen
 
-**Instruction screen**
+### Instruction screen:
 
 Create a new routine called 'Instructions'. In this routine, we will first add a text component which will show the instructions to the participants. Make sure to leave the duration of the component blank so participants get as much time as they need to read the instructions.
 
@@ -100,14 +108,14 @@ To exit out the instruction screen, we will create a keyboard component that let
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/instruct_key.png")
 ```
 
-**Transition screen**
+### Transition screen:
  
 After the participants finish the practice trial, we want a transition screen before moving into the actual trials for the experiment. This is done through another text component, but this time setting the duration to about 3 seconds to give them a chance to read. 
 ```{r, echo=FALSE, fig.cap="text component for transition screen"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/transition.png")
 ```
 
-**Goodbye screen**
+### Goodbye screen:
 
 We will end with a goodbye screen to let participants know they have finished the trial. This can be achieved with another text component with duraiton set to about 2 seconds. Don't forget to change the units to heights, and the formatting to 0.03. 
 
@@ -115,7 +123,9 @@ We will end with a goodbye screen to let participants know they have finished th
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/end.png")
 ```
 
-## Pushing experiment online to Pavlovia
+# **Hosting:** Pavlovia
+
+## Pushing the Posner Cuing Task online 
 
 Let's try to push our current experiment to Pavlovia by clicking either of the two buttons on the top (indicated by orange square). I prefer the first button since it will open up the experiment in the new screen once it commits the changes (so it's easier to visualize the changes).
 ```{r, echo=FALSE, fig.cap="pushing experiment to pavlovia"}

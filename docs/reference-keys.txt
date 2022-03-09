@@ -77,3 +77,13 @@ fig:unnamed-chunk-18
 fig:unnamed-chunk-19
 adding-instructions-transition-and-goodbye-screen
 fig:unnamed-chunk-20
+building-psychopy
+pushing-the-posner-cuing-task-online
+hosting-pavlovia
+building-psychopy-builder-interface
+building-the-posner-cuing-task-experiment
+instruction-screen
+transition-screen
+goodbye-screen
+building-setting-up-psychopy
+hosting-setting-up-pavlovia

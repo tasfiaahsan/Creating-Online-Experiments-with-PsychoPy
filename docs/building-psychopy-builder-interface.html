@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Building: PsychoPy Builder Interface | Creating Online Experiments</title>
+  <meta name="description" content="Chapter 3 Building: PsychoPy Builder Interface | Creating Online Experiments" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Building: PsychoPy Builder Interface | Creating Online Experiments" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Building: PsychoPy Builder Interface | Creating Online Experiments" />
+  
+  
+  
+
+<meta name="author" content="Tasfia Ahsan [ahsant@my.yorku.ca, York University]" />
+
+
+<meta name="date" content="2022-03-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="initial-setup.html"/>
+<link rel="next" href="hosting-pavlovia.html"/>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Online Experiment</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
+<li class="chapter" data-level="2" data-path="initial-setup.html"><a href="initial-setup.html"><i class="fa fa-check"></i><b>2</b> Initial Setup</a><ul>
+<li class="chapter" data-level="2.1" data-path="initial-setup.html"><a href="initial-setup.html#hosting-setting-up-psychopy-and-pavlovia"><i class="fa fa-check"></i><b>2.1</b> <strong>Hosting:</strong> setting up <span>PsychoPy</span> and <span>Pavlovia</span></a></li>
+<li class="chapter" data-level="2.2" data-path="initial-setup.html"><a href="initial-setup.html#consent-setting-up-consent-form-through-survey-website-qualtrics-google-form."><i class="fa fa-check"></i><b>2.2</b> <strong>Consent:</strong> setting up consent form through survey website (Qualtrics, Google Form).</a></li>
+<li class="chapter" data-level="2.3" data-path="initial-setup.html"><a href="initial-setup.html#recruitment-setting-up-recruitment-websites-urpp-prolific"><i class="fa fa-check"></i><b>2.3</b> <strong>Recruitment:</strong> setting up recruitment websites (URPP, Prolific)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html"><i class="fa fa-check"></i><b>3</b> <strong>Building:</strong> PsychoPy Builder Interface</a><ul>
+<li class="chapter" data-level="3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#building-the-posner-cuing-task-experiment"><i class="fa fa-check"></i><b>3.1</b> Building the Posner Cuing Task experiment</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#excel"><i class="fa fa-check"></i><b>3.1.1</b> Excel</a></li>
+<li class="chapter" data-level="3.1.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#builder"><i class="fa fa-check"></i><b>3.1.2</b> Builder</a></li>
+<li class="chapter" data-level="3.1.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#linking-excel-to-builder-using-a-loop"><i class="fa fa-check"></i><b>3.1.3</b> Linking Excel to Builder using a loop</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-practice-trials"><i class="fa fa-check"></i><b>3.2</b> Adding Practice Trials</a></li>
+<li class="chapter" data-level="3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-instructions-transition-and-goodbye-screen"><i class="fa fa-check"></i><b>3.3</b> Adding instructions, transition and goodbye screen</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#instruction-screen"><i class="fa fa-check"></i><b>3.3.1</b> Instruction screen:</a></li>
+<li class="chapter" data-level="3.3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#transition-screen"><i class="fa fa-check"></i><b>3.3.2</b> Transition screen:</a></li>
+<li class="chapter" data-level="3.3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#goodbye-screen"><i class="fa fa-check"></i><b>3.3.3</b> Goodbye screen:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="hosting-pavlovia.html"><a href="hosting-pavlovia.html"><i class="fa fa-check"></i><b>4</b> <strong>Hosting:</strong> Pavlovia</a><ul>
+<li class="chapter" data-level="4.1" data-path="hosting-pavlovia.html"><a href="hosting-pavlovia.html#pushing-the-posner-cuing-task-online"><i class="fa fa-check"></i><b>4.1</b> Pushing the Posner Cuing Task online</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html"><i class="fa fa-check"></i><b>5</b> <strong>Consent:</strong> Implementing consent form and demographics</a><ul>
+<li class="chapter" data-level="5.1" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-qualtrics"><i class="fa fa-check"></i><b>5.1</b> Adding consent form through <span>Qualtrics</span></a></li>
+<li class="chapter" data-level="5.2" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-google-forms"><i class="fa fa-check"></i><b>5.2</b> Adding consent form through <span>Google Forms</span></a></li>
+<li class="chapter" data-level="5.3" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-psychopy"><i class="fa fa-check"></i><b>5.3</b> Adding consent form through PsychoPy</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html"><i class="fa fa-check"></i><b>6</b> <strong>Recruitment:</strong> recruiting participants and collecting data online</a><ul>
+<li class="chapter" data-level="6.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-sona-undergraduate-research-participant-pool-urpp"><i class="fa fa-check"></i><b>6.1</b> Recruiting from SONA: Undergraduate Research Participant Pool <span>URPP</span></a><ul>
+<li class="chapter" data-level="6.1.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#urpp-qualtrics-pavlovia-urpp-automatic-process"><i class="fa fa-check"></i><b>6.1.1</b> URPP –&gt; Qualtrics –&gt; Pavlovia –&gt; URPP: Automatic Process</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-prolific"><i class="fa fa-check"></i><b>6.2</b> Recruiting from <span>Prolific</span></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#prolific-qualtrics-pavlovia-prolific-automatic-process"><i class="fa fa-check"></i><b>6.2.1</b> Prolific –&gt; Qualtrics –&gt; Pavlovia –&gt; Prolific: Automatic Process</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Creating Online Experiments</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="building-psychopy-builder-interface" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> <strong>Building:</strong> PsychoPy Builder Interface</h1>
+<div id="building-the-posner-cuing-task-experiment" class="section level2">
+<h2><span class="header-section-number">3.1</span> Building the Posner Cuing Task experiment</h2>
+<p><strong>Posner Cuing Task</strong></p>
+<p>Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/posner_task.png" alt="Time duration for each component of posner task."  />
+<p class="caption">
+Figure 3.1: Time duration for each component of posner task.
+</p>
+</div>
+<p>If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment.</p>
+<p>Before beginning, it’s helpful to know a little bit about how PsychoPy builder works.
+PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial. It’s best to create a separate folder for the experiment to contain all parts together (excel file, images, psyexp file) for consistency of pathways.</p>
+<div id="excel" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Excel</h3>
+<p>Let’s start by creating the condition file on excel. For this task, we have three condition variables: condition type (valid, invalid), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. The positions are represented in the units <a href="https://www.psychopy.org/general/units.html">height</a>, which scales everything relative to height of the window (best for online experiments).</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/condition.png" alt="Condition file for Posner Cuing Task."  />
+<p class="caption">
+Figure 3.2: Condition file for Posner Cuing Task.
+</p>
+</div>
+</div>
+<div id="builder" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Builder</h3>
+<p>Now that we have the condition file ready to go, we can create the other components of our routine through builder. Let’s break down the task into a timeline of events.</p>
+<p><strong>1. Fixation cross appears from 0s to end of trial</strong></p>
+<p>We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to 0.09 height units.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="images/fixation.png" alt="Fixation cross properties on builder."  />
+<p class="caption">
+Figure 3.3: Fixation cross properties on builder.
+</p>
+</div>
+<p><strong>2. Two box appears 0.25s after fixation (start time 0.25s)</strong></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/left_square.png" alt="Left square properties on builder."  />
+<p class="caption">
+Figure 3.4: Left square properties on builder.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/copy_right.png" alt="Copying left square to create right square."  />
+<p class="caption">
+Figure 3.5: Copying left square to create right square.
+</p>
+</div>
+<p><strong>3. Cue appears 0.50s after box (start time 0.75s)</strong></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/cue.png" alt="Cue image properties on builder."  />
+<p class="caption">
+Figure 3.6: Cue image properties on builder.
+</p>
+</div>
+<p><strong>4. Target appears 0.10s after cue (start time 0.85s), target duration 2s or until response</strong></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="images/go.png" alt="Go image properties on builder."  />
+<p class="caption">
+Figure 3.7: Go image properties on builder.
+</p>
+</div>
+<p><strong>5. Record response key to end trial</strong></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="images/key_resp.png" alt="response key properties on builder."  />
+<p class="caption">
+Figure 3.8: response key properties on builder.
+</p>
+</div>
+</div>
+<div id="linking-excel-to-builder-using-a-loop" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Linking Excel to Builder using a loop</h3>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="images/routine.png" alt="Routine flow and loop on builder ."  />
+<p class="caption">
+Figure 3.9: Routine flow and loop on builder .
+</p>
+</div>
+</div>
+</div>
+<div id="adding-practice-trials" class="section level2">
+<h2><span class="header-section-number">3.2</span> Adding Practice Trials</h2>
+<p>For online experiments, it’s especially important to have practice trials to make sure your participants understand the task properly. Today we will be creating a practice trial that provides feedback after every trial, and doesn’t let the participant continue to the actual trial until they’ve gotten atleast 2 correct answer.</p>
+We want to have our practice trial contain everything our real trial has. To accomplish this, we will copy and paste the entire routine using Menu –&gt; Copy Routine –&gt; Paste Routine. Name this routine something meaningful like practice.
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="images/prac.png" alt="copying trial to create practice routine."  />
+<p class="caption">
+Figure 3.10: copying trial to create practice routine.
+</p>
+</div>
+<p>Next we will create another routine called Feedback, which will tell the participant whether they got the trial correct or incorrect. This routine should be placed right after the practice trial. We will link these two routines to the conditional file using a loop. By setting the repetitions to a really large number, we make sure the loop continues on until we define when it breaks.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="images/prac_comp.png" alt="creating feedback routine and linking everything to condition file."  />
+<p class="caption">
+Figure 3.11: creating feedback routine and linking everything to condition file.
+</p>
+</div>
+<p>Let’s return back to the practice trial and add a custom code component to define when the loop breaks (when participants can exit out of the practice trial).</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="images/prac_code.png" alt="code component for practice trial"  />
+<p class="caption">
+Figure 3.12: code component for practice trial
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<img src="images/feedback_code.png" alt="code component for feedback message"  />
+<p class="caption">
+Figure 3.13: code component for feedback message
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
+<img src="images/feedback_msg.png" alt="text component to show feedback message"  />
+<p class="caption">
+Figure 3.14: text component to show feedback message
+</p>
+</div>
+</div>
+<div id="adding-instructions-transition-and-goodbye-screen" class="section level2">
+<h2><span class="header-section-number">3.3</span> Adding instructions, transition and goodbye screen</h2>
+<div id="instruction-screen" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Instruction screen:</h3>
+<p>Create a new routine called ‘Instructions’. In this routine, we will first add a text component which will show the instructions to the participants. Make sure to leave the duration of the component blank so participants get as much time as they need to read the instructions.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="images/instruct_text.png" alt="text component for instruction screen"  />
+<p class="caption">
+Figure 3.15: text component for instruction screen
+</p>
+</div>
+<p>To exit out the instruction screen, we will create a keyboard component that lets participants move forward to the practice trial by pressing the space button.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="images/instruct_key.png" alt="key component for instruction screen"  />
+<p class="caption">
+Figure 3.16: key component for instruction screen
+</p>
+</div>
+</div>
+<div id="transition-screen" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Transition screen:</h3>
+After the participants finish the practice trial, we want a transition screen before moving into the actual trials for the experiment. This is done through another text component, but this time setting the duration to about 3 seconds to give them a chance to read.
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="images/transition.png" alt="text component for transition screen"  />
+<p class="caption">
+Figure 3.17: text component for transition screen
+</p>
+</div>
+</div>
+<div id="goodbye-screen" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Goodbye screen:</h3>
+<p>We will end with a goodbye screen to let participants know they have finished the trial. This can be achieved with another text component with duraiton set to about 2 seconds. Don’t forget to change the units to heights, and the formatting to 0.03.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="images/end.png" alt="text component for end screen"  />
+<p class="caption">
+Figure 3.18: text component for end screen
+</p>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="initial-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hosting-pavlovia.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/edit/master/03-Hosting.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/blob/master/03-Hosting.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -7,14 +7,16 @@ site: bookdown::bookdown_site
 
 # Overview
 
-When we carry out an in-person experiment, we have three components: 
+When we carry out an in-person experiment, we have four components: 
 
-- **Hosting:** usually a computer in the lab
+- **Building:** experiment building program (i.e., MATLAB, PsychoPy)
+- **Hosting:** usually carried out in a lab
 - **Consent:** paper consent form that is given to participants before they begin
 - **Recruitement:** place where we find participants (e.g URPP)
 
-For online experiment, those same three components are replaced by different websites that does each respective job
+For online experiment, those same four components are replaced by different websites that does each respective job
 
+- **Building:** experiment building program (i.e., PsychoPy)
 - **Hosting:** website to host the experiment (i.e, Pavlovia)
 - **Consent:** consent form integrated through experiment or survey website (i.e., PsychoPy or Qualtrics)
 - **Recruitment:** website to recruite participants from (e.g. URPP, Prolific)

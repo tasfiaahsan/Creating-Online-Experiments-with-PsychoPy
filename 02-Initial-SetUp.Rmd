@@ -2,11 +2,14 @@
 
 **Resources** for this experiment can be found [here](https://drive.google.com/drive/folders/1SrTXSM9n9Ot9OpjQYqxAGZwO3b4I9CQZ?usp=sharing). Please download it before continuing to the next sections.
 
-## **Hosting:** setting up [PsychoPy](https://www.psychopy.org) and [Pavlovia]((https://www.pavlovia.org))
+## **Building:** setting up [PsychoPy](https://www.psychopy.org) 
 
-We will be building our experiment in PsychoPy Builder and then running it online on Pavlovia. 
+Install [PsychoPy](https://www.psychopy.org) on your computer, which is what we will use to build our experiment.  
 
-To begin, install [PsychoPy](https://www.psychopy.org) on your computer. Once you have PsychoPy set up on your computer, we will begin setting up for [Pavlovia](https://www.pavlovia.org). You can also access Pavlovia directly from PsychoPy interface as shown below.
+
+## **Hosting:** setting up [Pavlovia](https://www.pavlovia.org)
+
+You can go to Pavlovia by clicking the link above or access it directly through the PsychoPy interface as shown below.
 
 ```{r, echo=FALSE, fig.cap="Accessing Pavlovia through PsychoPy."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/logging-pavlovia.png")
