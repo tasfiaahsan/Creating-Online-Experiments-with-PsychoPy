@@ -240,49 +240,52 @@ Figure 3.14: text component to show feedback message
 <div id="adding-instructions-transition-and-goodbye-screen" class="section level3">
 <h3><span class="header-section-number">3.1.5</span> Adding instructions, transition and goodbye screen</h3>
 <p><strong>Instruction screen</strong>
-1. Instruction screen: create a new routine called ‘Instructions’. In this routine, we will first add a text component which will show the instructions to the participants. Make sure to leave the duration of the component blank so participants get as much time as they need to read the instructions.</p>
+Create a new routine called ‘Instructions’. In this routine, we will first add a text component which will show the instructions to the participants. Make sure to leave the duration of the component blank so participants get as much time as they need to read the instructions.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
-<img src="images/instruct_text.png" alt="text component for instructions"  />
+<img src="images/instruct_text.png" alt="text component for instruction screen"  />
 <p class="caption">
-Figure 3.15: text component for instructions
+Figure 3.15: text component for instruction screen
 </p>
 </div>
-<ol start="2" style="list-style-type: decimal">
-<li>To exit out the instruction screen, we will create a keyboard component that lets participants move forward to the practice trial by pressing the space button.</li>
-</ol>
+<p>To exit out the instruction screen, we will create a keyboard component that lets participants move forward to the practice trial by pressing the space button.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
-<img src="images/instruct_key.png" alt="key component for instructions"  />
+<img src="images/instruct_key.png" alt="key component for instruction screen"  />
 <p class="caption">
-Figure 3.16: key component for instructions
+Figure 3.16: key component for instruction screen
 </p>
 </div>
 <p><strong>Transition screen</strong></p>
-<ol style="list-style-type: decimal">
-<li>After the participants finish the practice trial, we want a transition screen before moving into the actual trials for the experiment. This is done through another text component, but this time setting the duration to about 3 seconds to give them a chance to read.
+After the participants finish the practice trial, we want a transition screen before moving into the actual trials for the experiment. This is done through another text component, but this time setting the duration to about 3 seconds to give them a chance to read.
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
-<img src="images/transition.png" alt="text component for transition"  />
+<img src="images/transition.png" alt="text component for transition screen"  />
 <p class="caption">
-Figure 3.17: text component for transition
+Figure 3.17: text component for transition screen
 </p>
-</div></li>
-</ol>
-<p><strong>Goodbye screen</strong></p>
+</div>
+<p><strong>Goodbye screen</strong>
+We will end with a goodbye screen to let participants know they have finished the trial. This can be achieved with another text component with duraiton set to about 2 seconds. Don’t forget to change the units to heights, and the formatting to 0.03.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="images/end.png" alt="text component for end screen"  />
+<p class="caption">
+Figure 3.18: text component for end screen
+</p>
+</div>
 </div>
 </div>
 <div id="pushing-experiment-online-to-pavlovia" class="section level2">
 <h2><span class="header-section-number">3.2</span> Pushing experiment online to Pavlovia</h2>
 Let’s try to push our current experiment to Pavlovia by clicking either of the two buttons on the top (indicated by orange square). I prefer the first button since it will open up the experiment in the new screen once it commits the changes (so it’s easier to visualize the changes).
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
 <img src="images/pushing.png" alt="pushing experiment to pavlovia"  />
 <p class="caption">
-Figure 3.18: pushing experiment to pavlovia
+Figure 3.19: pushing experiment to pavlovia
 </p>
 </div>
 If you pushed the first button, you should see a warning screen open uo as shown below. All PyschoPy experiments are set to Inactive by default so we ened to click on the experiment page and set it to running. Then we are able to run the experiment by clicking the link or the run button.
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
 <img src="images/pavlovia_run.png" alt="changing experiment to running"  />
 <p class="caption">
-Figure 3.19: changing experiment to running
+Figure 3.20: changing experiment to running
 </p>
 </div>
 
