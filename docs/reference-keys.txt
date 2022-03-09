@@ -72,3 +72,7 @@ recruitment-setting-up-recruitment-websites-urpp-prolific
 hosting-pushing-experiment-online-to-pavlovia
 building-an-experiment-with-psychopy-builder
 adding-welcome-transition-and-goodbye-screen
+fig:unnamed-chunk-17
+fig:unnamed-chunk-18
+fig:unnamed-chunk-19
+adding-instructions-transition-and-goodbye-screen
