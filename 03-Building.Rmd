@@ -1,3 +1,9 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
 # **Building:**  PsychoPy Builder Interface
 
 ## Building the Posner Cuing Task experiment 
@@ -121,17 +127,4 @@ We will end with a goodbye screen to let participants know they have finished th
 
 ```{r, echo=FALSE, fig.cap="text component for end screen"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/end.png")
-```
-
-# **Hosting:** Pavlovia
-
-## Pushing the Posner Cuing Task online 
-
-Let's try to push our current experiment to Pavlovia by clicking either of the two buttons on the top (indicated by orange square). I prefer the first button since it will open up the experiment in the new screen once it commits the changes (so it's easier to visualize the changes).
-```{r, echo=FALSE, fig.cap="pushing experiment to pavlovia"}
-knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/pushing.png")
-```
-If you pushed the first button, you should see a warning screen open uo as shown below. All PyschoPy experiments are set to Inactive by default so we ened to click on the experiment page and set it to running. Then we are able to run the experiment by clicking the link or the run button. 
-```{r, echo=FALSE, fig.cap="changing experiment to running"}
-knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/pavlovia_run.png")
 ```

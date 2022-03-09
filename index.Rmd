@@ -1,7 +1,7 @@
 --- 
 title: "Creating Online Experiments"
 author: "Tasfia Ahsan [ahsant@my.yorku.ca, York University]"
-date: '`r Sys.Date()`'
+date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 

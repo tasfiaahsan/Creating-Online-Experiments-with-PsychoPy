@@ -87,3 +87,7 @@ transition-screen
 goodbye-screen
 building-setting-up-psychopy
 hosting-setting-up-pavlovia
+pushing-the-posner-cuing-task-online-1
+fig:unnamed-chunk-21
+fig:unnamed-chunk-22
+hosting-pavlovia-1
