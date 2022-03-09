@@ -1,6 +1,6 @@
-# **Hosting:** PsychoPy and Pavlovia
+# **Hosting:**  PsychoPy and Pavlovia
 
-## Creating an experiment on PsychoPy Builder
+## Building an experiment with PsychoPy Builder
 
 **Posner Cuing Task**
 Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials. 
@@ -10,8 +10,6 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 ```
 
 If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment. 
-
-All resources of this experiment can be found [here](https://drive.google.com/drive/folders/1SrTXSM9n9Ot9OpjQYqxAGZwO3b4I9CQZ?usp=sharing), but to create the experiment yourself, you only need to download the images of the cue and go signal. 
 
 Before beginning, it's helpful to know a little bit about how PsychoPy builder works. 
 PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial. It's best to create a separate folder for the experiment to contain all parts together (excel file, images, psyexp file) for consistency of pathways. 
@@ -58,7 +56,7 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 ```
 
 
-## Adding Practice Trials
+### Adding Practice Trials
 
 For online experiments, it's especially important to have practice trials to make sure your participants understand the task properly. Today we will be creating a practice trial that provides feedback after every trial, and doesn't let the participant continue to the actual trial until they've gotten atleast 2 correct answer.
 
@@ -86,9 +84,13 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/feedback_msg.png")
 ```
 
-## Pushing Experiment Online to Pavlovia
+### Adding welcome, transition and goodbye screen
 
-Let's try to push our current experiment to Pavlovia by clicking either of the two buttons on the top (indicated by orange square). I prefer the first button since it will open up the experiment in the new screen once it commits the changes, while the second one will just push the changes. 
+
+
+## Pushing experiment online to Pavlovia
+
+Let's try to push our current experiment to Pavlovia by clicking either of the two buttons on the top (indicated by orange square). I prefer the first button since it will open up the experiment in the new screen once it commits the changes (so it's easier to visualize the changes).
 ```{r, echo=FALSE, fig.cap="pushing experiment to pavlovia"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/pushing.png")
 ```

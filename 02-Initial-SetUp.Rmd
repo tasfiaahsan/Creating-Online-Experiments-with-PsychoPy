@@ -1,8 +1,10 @@
 # Initial Setup
 
+**Resources** for this experiment can be found [here](https://drive.google.com/drive/folders/1SrTXSM9n9Ot9OpjQYqxAGZwO3b4I9CQZ?usp=sharing). Please download it before continuing to the next sections.
+
 ## **Hosting:** setting up [PsychoPy](https://www.psychopy.org) and [Pavlovia]((https://www.pavlovia.org))
 
-We will be building our experiment in PsychoPy and then running them online on Pavlovia. 
+We will be building our experiment in PsychoPy Builder and then running it online on Pavlovia. 
 
 To begin, install [PsychoPy](https://www.psychopy.org) on your computer. Once you have PsychoPy set up on your computer, we will begin setting up for [Pavlovia](https://www.pavlovia.org). You can also access Pavlovia directly from PsychoPy interface as shown below.
 
@@ -10,11 +12,11 @@ To begin, install [PsychoPy](https://www.psychopy.org) on your computer. Once yo
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/logging-pavlovia.png")
 ```
 
-Once you have gone to Pavlovia, create an account with your **yorku email**. York University has an institutional licensing with Pavlovia that allows you to run all your studies free of cost under your york email. 
+Once you have gone to Pavlovia, create an account with your **yorku email address**. York University has an institutional licensing with Pavlovia that allows you to run all your studies **free of cost** under your york email address. 
 
-Once you've created your Pavlovia account, we'll link your computer to the Pavlovia reposotory through [gitlab](https://gitlab.pavlovia.org/) by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online. 
+Once you've created your Pavlovia account, we'll link your local computer to the Pavlovia repository through [gitlab](https://gitlab.pavlovia.org/) by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online. 
 
-To access your SSH key setup, log onto gitlab using your credentials, then go to __settings__ and click __SSH key__ from the left hand menu bar.
+To access SSH key setup: log onto gitlab using your credentials, then go to __settings__ and click __SSH key__ from the left hand menu bar.
 
 ```{r, echo=FALSE, fig.cap="Finding setting on gitlab."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/settings.png")
@@ -37,9 +39,9 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 Press enter to choose the suggested path. Once the path is chosen, create a password (recommended), or press enter twice to skip creating a password. 
 
-Now that your key is generated, we will now add it to the gitlab account.
+Now that your key is generated, we will add it to the gitlab account.
 
-First copy your public SSH key by typing in the comman below:
+First, copy your public SSH key by typing in the command below:
 
 **macOS:**
 pbcopy < ~/.ssh/id_ed25519.pub
@@ -58,18 +60,18 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 ## **Consent:** setting up consent form through survey website (Qualtrics, Google Form).
 
-[Qualtrics](https://www.qualtrics.com/): At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.
+[Qualtrics](https://www.qualtrics.com/) **(recommended)**: At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account for the lab and let you use it then this is most **optimal** option for online experiments. 
 
-[Google Forms](https://www.google.ca/forms/): Can be setup with any Google accounts
+[Google Forms](https://www.google.ca/forms/): Can be setup with any Google accounts.
 
 
-## **Recruitment:** setting up recruitment websites (URPP and Prolific) 
+## **Recruitment:** setting up recruitment websites (URPP, Prolific) 
 
 [URPP](https://yorku.sona-systems.com/): accessible to all graduate students through york email. 
 Cost of running studies = free
 
 [Prolific](https://www.prolific.co/) : need to create account and input money into account before running studies.
-Cost of running studies: to run 40 participants for a 20 minute study: ~£3.33 ($5.6 CAD) per participant. 
+Cost of running studies: to run 40 participants for a 20 minute study shown below so about ~£3.33 ($5.6 CAD) per participant. 
 
 ```{r, echo=FALSE, fig.cap="Prolific cost breakdown."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prolific_cost.png")

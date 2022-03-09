@@ -41,9 +41,16 @@ URPP:
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_psychopy.png")
 ```
 
+
 ## Recruiting from [Prolific](prolific.co)
 
 ### Prolific --> Qualtrics --> Pavlovia --> Prolific: Automatic Process
+
+
+Qualtrics:
+1. In the first question, we will embed the Prolific code through the right click options --> default choices
+2. Add a new embedded data element, type in 'participant' as a variable and click insert. This will allow Qualtrics to recongize the Participant's ID as the variable 'participant'.
+
 
 
 

@@ -21,10 +21,10 @@
   
   
 
-<meta name="author" content="Tasfia Ahsan" />
+<meta name="author" content="Tasfia Ahsan [ahsant@my.yorku.ca, York University]" />
 
 
-<meta name="date" content="2022-03-07" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,7 +76,7 @@
 <li class="chapter" data-level="2" data-path="initial-setup.html"><a href="initial-setup.html"><i class="fa fa-check"></i><b>2</b> Initial Setup</a><ul>
 <li class="chapter" data-level="2.1" data-path="initial-setup.html"><a href="initial-setup.html#hosting-setting-up-psychopy-and-pavlovia"><i class="fa fa-check"></i><b>2.1</b> <strong>Hosting:</strong> setting up <span>PsychoPy</span> and <span>Pavlovia</span></a></li>
 <li class="chapter" data-level="2.2" data-path="initial-setup.html"><a href="initial-setup.html#consent-setting-up-consent-form-through-survey-website-qualtrics-google-form."><i class="fa fa-check"></i><b>2.2</b> <strong>Consent:</strong> setting up consent form through survey website (Qualtrics, Google Form).</a></li>
-<li class="chapter" data-level="2.3" data-path="initial-setup.html"><a href="initial-setup.html#recruitment-setting-up-recruitment-websites-urpp-and-prolific"><i class="fa fa-check"></i><b>2.3</b> <strong>Recruitment:</strong> setting up recruitment websites (URPP and Prolific)</a></li>
+<li class="chapter" data-level="2.3" data-path="initial-setup.html"><a href="initial-setup.html#recruitment-setting-up-recruitment-websites-urpp-prolific"><i class="fa fa-check"></i><b>2.3</b> <strong>Recruitment:</strong> setting up recruitment websites (URPP, Prolific)</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="hosting-psychopy-and-pavlovia.html"><a href="hosting-psychopy-and-pavlovia.html"><i class="fa fa-check"></i><b>3</b> <strong>Hosting:</strong> PsychoPy and Pavlovia</a><ul>
 <li class="chapter" data-level="3.1" data-path="hosting-psychopy-and-pavlovia.html"><a href="hosting-psychopy-and-pavlovia.html#creating-an-experiment-on-psychopy-builder"><i class="fa fa-check"></i><b>3.1</b> Creating an experiment on PsychoPy Builder</a><ul>
@@ -121,9 +121,10 @@
             <section class="normal" id="section-">
 <div id="initial-setup" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Initial Setup</h1>
+<p><strong>Resources</strong> for this experiment can be found <a href="https://drive.google.com/drive/folders/1SrTXSM9n9Ot9OpjQYqxAGZwO3b4I9CQZ?usp=sharing">here</a>. Please download it before continuing to the next sections.</p>
 <div id="hosting-setting-up-psychopy-and-pavlovia" class="section level2">
 <h2><span class="header-section-number">2.1</span> <strong>Hosting:</strong> setting up <a href="https://www.psychopy.org">PsychoPy</a> and <a href="(https://www.pavlovia.org)">Pavlovia</a></h2>
-<p>We will be building our experiment in PsychoPy and then running them online on Pavlovia.</p>
+<p>We will be building our experiment in PsychoPy Builder and then running it online on Pavlovia.</p>
 <p>To begin, install <a href="https://www.psychopy.org">PsychoPy</a> on your computer. Once you have PsychoPy set up on your computer, we will begin setting up for <a href="https://www.pavlovia.org">Pavlovia</a>. You can also access Pavlovia directly from PsychoPy interface as shown below.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="images/logging-pavlovia.png" alt="Accessing Pavlovia through PsychoPy."  />
@@ -131,9 +132,9 @@
 Figure 2.1: Accessing Pavlovia through PsychoPy.
 </p>
 </div>
-<p>Once you have gone to Pavlovia, create an account with your <strong>yorku email</strong>. York University has an institutional licensing with Pavlovia that allows you to run all your studies free of cost under your york email.</p>
-<p>Once you’ve created your Pavlovia account, we’ll link your computer to the Pavlovia reposotory through <a href="https://gitlab.pavlovia.org/">gitlab</a> by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online.</p>
-<p>To access your SSH key setup, log onto gitlab using your credentials, then go to <strong>settings</strong> and click <strong>SSH key</strong> from the left hand menu bar.</p>
+<p>Once you have gone to Pavlovia, create an account with your <strong>yorku email address</strong>. York University has an institutional licensing with Pavlovia that allows you to run all your studies <strong>free of cost</strong> under your york email address.</p>
+<p>Once you’ve created your Pavlovia account, we’ll link your local computer to the Pavlovia repository through <a href="https://gitlab.pavlovia.org/">gitlab</a> by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online.</p>
+<p>To access SSH key setup: log onto gitlab using your credentials, then go to <strong>settings</strong> and click <strong>SSH key</strong> from the left hand menu bar.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="images/settings.png" alt="Finding setting on gitlab."  />
 <p class="caption">
@@ -157,8 +158,8 @@ Figure 2.4: Command line for generating RSA key pair.
 </p>
 </div>
 <p>Press enter to choose the suggested path. Once the path is chosen, create a password (recommended), or press enter twice to skip creating a password.</p>
-<p>Now that your key is generated, we will now add it to the gitlab account.</p>
-<p>First copy your public SSH key by typing in the comman below:</p>
+<p>Now that your key is generated, we will add it to the gitlab account.</p>
+<p>First, copy your public SSH key by typing in the command below:</p>
 <p><strong>macOS:</strong>
 pbcopy &lt; ~/.ssh/id_ed25519.pub</p>
 <p><strong>WSL / GNU/Linux (requires the xclip package):</strong>
@@ -175,15 +176,15 @@ Figure 2.5: Pasting SSH key onto gitlab.
 </div>
 <div id="consent-setting-up-consent-form-through-survey-website-qualtrics-google-form." class="section level2">
 <h2><span class="header-section-number">2.2</span> <strong>Consent:</strong> setting up consent form through survey website (Qualtrics, Google Form).</h2>
-<p><a href="https://www.qualtrics.com/">Qualtrics</a>: At this time, only full-time psychology professors have <a href="https://psycentre.apps01.yorku.ca/wp/qualtrics/">access</a> to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account and let you use it, then I would highly recommend using this option to organize your consent forms.</p>
-<p><a href="https://www.google.ca/forms/">Google Forms</a>: Can be setup with any Google accounts</p>
+<p><a href="https://www.qualtrics.com/">Qualtrics</a> <strong>(recommended)</strong>: At this time, only full-time psychology professors have <a href="https://psycentre.apps01.yorku.ca/wp/qualtrics/">access</a> to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account for the lab and let you use it then this is most <strong>optimal</strong> option for online experiments.</p>
+<p><a href="https://www.google.ca/forms/">Google Forms</a>: Can be setup with any Google accounts.</p>
 </div>
-<div id="recruitment-setting-up-recruitment-websites-urpp-and-prolific" class="section level2">
-<h2><span class="header-section-number">2.3</span> <strong>Recruitment:</strong> setting up recruitment websites (URPP and Prolific)</h2>
+<div id="recruitment-setting-up-recruitment-websites-urpp-prolific" class="section level2">
+<h2><span class="header-section-number">2.3</span> <strong>Recruitment:</strong> setting up recruitment websites (URPP, Prolific)</h2>
 <p><a href="https://yorku.sona-systems.com/">URPP</a>: accessible to all graduate students through york email.
 Cost of running studies = free</p>
 <p><a href="https://www.prolific.co/">Prolific</a> : need to create account and input money into account before running studies.
-Cost of running studies: to run 40 participants for a 20 minute study: ~£3.33 ($5.6 CAD) per participant.</p>
+Cost of running studies: to run 40 participants for a 20 minute study shown below so about ~£3.33 ($5.6 CAD) per participant.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="images/prolific_cost.png" alt="Prolific cost breakdown."  />
 <p class="caption">

@@ -68,3 +68,7 @@ recruiting-from-prolific
 recruitment-recruiting-participants-and-collecting-data-online
 consent-setting-up-consent-form-through-survey-website-qualtrics-google-form.
 recruitment-setting-up-recruitment-websites-urpp-and-prolific
+recruitment-setting-up-recruitment-websites-urpp-prolific
+hosting-pushing-experiment-online-to-pavlovia
+building-an-experiment-with-psychopy-builder
+adding-welcome-transition-and-goodbye-screen
