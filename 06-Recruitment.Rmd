@@ -36,16 +36,23 @@ URPP:
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_psychopy.png")
 ```
 
+### URPP --> Pavlovia --> URPP: Automatic Process
 
-## Recruiting from [Prolific](prolific.co)
+URPP:
+1. Create a new study in URPP
+2. Under 'Study URL: paste Pavlovia study URL ending in ?participant=%SURVEY_CODE%. This will pass the URPP code to Pavlovia through the variable 'participant'. 
+3. Go to study page and copy the URPP completeion URL
 
-### Prolific --> Qualtrics --> Pavlovia --> Prolific: Automatic Process
+```{r, echo=FALSE, fig.cap="URL ending, PsychoPy"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_pavlovia.png")
+```
 
+PsychoPy:
+3. Click on Experimenter Settings on PsychoPy --> Online tab
+3.Paste the URPP completion URL and add "+expInfo['participant']" to end of it. This allows URPP and PsychoPy to communicate the participant ID through the variable 'participant' 
+4. Don't forget to push the changes from PsychoPy to Pavlovia!
 
-Qualtrics:
-1. In the first question, we will embed the Prolific code through the right click options --> default choices
-2. Add a new embedded data element, type in 'participant' as a variable and click insert. This will allow Qualtrics to recongize the Participant's ID as the variable 'participant'.
-
-
-
+```{r, echo=FALSE, fig.cap="URL ending, PsychoPy"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_psychopy.png")
+```
 

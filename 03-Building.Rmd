@@ -100,7 +100,7 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 ## Adding instructions, transition and goodbye screen
 
-### Instruction screen:
+### Instruction screen
 
 Create a new routine called 'Instructions'. In this routine, we will first add a text component which will show the instructions to the participants. Make sure to leave the duration of the component blank so participants get as much time as they need to read the instructions.
 
@@ -114,14 +114,14 @@ To exit out the instruction screen, we will create a keyboard component that let
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/instruct_key.png")
 ```
 
-### Transition screen:
+### Transition screen
  
 After the participants finish the practice trial, we want a transition screen before moving into the actual trials for the experiment. This is done through another text component, but this time setting the duration to about 3 seconds to give them a chance to read. 
 ```{r, echo=FALSE, fig.cap="text component for transition screen"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/transition.png")
 ```
 
-### Goodbye screen:
+### Goodbye screen
 
 We will end with a goodbye screen to let participants know they have finished the trial. This can be achieved with another text component with duraiton set to about 2 seconds. Don't forget to change the units to heights, and the formatting to 0.03. 
 
