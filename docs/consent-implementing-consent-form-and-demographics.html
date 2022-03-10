@@ -24,7 +24,7 @@
 <meta name="author" content="Tasfia Ahsan [ahsant@my.yorku.ca, York University]" />
 
 
-<meta name="date" content="2022-03-09" />
+<meta name="date" content="2022-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,8 +97,8 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html"><i class="fa fa-check"></i><b>5</b> <strong>Consent:</strong> Implementing consent form and demographics</a><ul>
 <li class="chapter" data-level="5.1" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-qualtrics"><i class="fa fa-check"></i><b>5.1</b> Adding consent form through <span>Qualtrics</span></a></li>
-<li class="chapter" data-level="5.2" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-google-forms"><i class="fa fa-check"></i><b>5.2</b> Adding consent form through <span>Google Forms</span></a></li>
-<li class="chapter" data-level="5.3" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-psychopy"><i class="fa fa-check"></i><b>5.3</b> Adding consent form through PsychoPy</a></li>
+<li class="chapter" data-level="5.2" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-psychopy"><i class="fa fa-check"></i><b>5.2</b> Adding consent form through PsychoPy</a></li>
+<li class="chapter" data-level="5.3" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-google-forms"><i class="fa fa-check"></i><b>5.3</b> Adding consent form through <span>Google Forms</span></a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html"><i class="fa fa-check"></i><b>6</b> <strong>Recruitment:</strong> recruiting participants and collecting data online</a><ul>
 <li class="chapter" data-level="6.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-sona-undergraduate-research-participant-pool-urpp"><i class="fa fa-check"></i><b>6.1</b> Recruiting from SONA: Undergraduate Research Participant Pool <span>URPP</span></a><ul>
@@ -191,44 +191,72 @@ Figure 5.5: end of survey, Qualtrics
 <p>Benefit: automatic crediting, clean presentation.
 Drawback: paid through institutional license</p>
 </div>
+<div id="adding-consent-form-through-psychopy" class="section level2">
+<h2><span class="header-section-number">5.2</span> Adding consent form through PsychoPy</h2>
+<p>Fitting large bundles of text into PsychoPy can get very messy. The best way to do it is to take a screenshot of the consent form (consent_form.png) and scale the image to fit the screen. Then we can surround it with text on the top and bottom to ask them to read the consent, press ‘y’ to consent, or press ‘escape’ key to exit out of screen.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="images/consent_image.png" alt="consent form, PsychoPy"  />
+<p class="caption">
+Figure 5.6: consent form, PsychoPy
+</p>
+</div>
+<p>We’ll put a text component on the top of the consent form asking participants to review the form. The y position is adjusted to shift the text above the consent form image.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="images/top_text.png" alt="text component asking participants to review consent, PsychoPy"  />
+<p class="caption">
+Figure 5.7: text component asking participants to review consent, PsychoPy
+</p>
+</div>
+<p>Another text component in the bottom of the consent form will used to ask the participants to consent. We will make this text red in order to capture their attention.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="images/bottom_text.png" alt="text component describing how to consent, PsychoPy"  />
+<p class="caption">
+Figure 5.8: text component describing how to consent, PsychoPy
+</p>
+</div>
+<p>Here we create a keyboard component to register the participant’s response to consent. The default key for leaving the experiment is the escape button, so we will set our keyboard keys to ‘y’ for consenting, and ask participants to press escape if they don’t consent.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="images/key_consent.png" alt="keyboard component to consent, PsychoPy"  />
+<p class="caption">
+Figure 5.9: keyboard component to consent, PsychoPy
+</p>
+</div>
+<p>Pro: Free
+Con: looks very chunky, requires more techincal skills to get demographics (custom code).</p>
+</div>
 <div id="adding-consent-form-through-google-forms" class="section level2">
-<h2><span class="header-section-number">5.2</span> Adding consent form through <a href="https://www.google.ca/forms/about/">Google Forms</a></h2>
+<h2><span class="header-section-number">5.3</span> Adding consent form through <a href="https://www.google.ca/forms/about/">Google Forms</a></h2>
 <p>Sign into Google Forms –&gt; Start a new Blank form</p>
 Q1: Here participants would need to paste their identification code
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
 <img src="images/q1_form.png" alt="identification code, Google Form "  />
 <p class="caption">
-Figure 5.6: identification code, Google Form
+Figure 5.10: identification code, Google Form
 </p>
 </div>
 Q2: You can copy and paste the consent form here or upload the image of the form for easier formatting. Reponse is required to move forward.
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
 <img src="images/q2_form.png" alt="consent form, Qualtrics"  />
 <p class="caption">
-Figure 5.7: consent form, Qualtrics
+Figure 5.11: consent form, Qualtrics
 </p>
 </div>
 Q3 and Q4: demographic information as above (age and gender)
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
 <img src="images/q3_q4_form.png" alt="age &amp; gender information, Google Form"  />
 <p class="caption">
-Figure 5.8: age &amp; gender information, Google Form
+Figure 5.12: age &amp; gender information, Google Form
 </p>
 </div>
 End of survey: ending the survey with the link to the experiment that the participant must click
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
 <img src="images/ending_form.png" alt="end of survey, Google Form"  />
 <p class="caption">
-Figure 5.9: end of survey, Google Form
+Figure 5.13: end of survey, Google Form
 </p>
 </div>
 <p>Pro: Free. Clean presentation, keeps demographics and consent information separate from data.
 Con: participants need to click on link to go to experiment. Manual crediting for participation.</p>
-</div>
-<div id="adding-consent-form-through-psychopy" class="section level2">
-<h2><span class="header-section-number">5.3</span> Adding consent form through PsychoPy</h2>
-<p>Pro: Free
-Con: looks very chunky, data is together with demographics information.</p>
 
 </div>
 </div>
