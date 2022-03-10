@@ -49,9 +49,9 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 ```
 
 PsychoPy:
-3. Click on Experimenter Settings on PsychoPy --> Online tab
-3.Paste the URPP completion URL and add "+expInfo['participant']" to end of it. This allows URPP and PsychoPy to communicate the participant ID through the variable 'participant' 
-4. Don't forget to push the changes from PsychoPy to Pavlovia!
+4. Click on Experimenter Settings on PsychoPy --> Online tab
+5. Paste the URPP completion URL and add "+expInfo['participant']" to end of it. This allows URPP and PsychoPy to communicate the participant ID through the variable 'participant' 
+6. Don't forget to push the changes from PsychoPy to Pavlovia!
 
 ```{r, echo=FALSE, fig.cap="URL ending, PsychoPy"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_psychopy.png")
