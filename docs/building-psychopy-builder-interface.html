@@ -130,7 +130,7 @@
 <div id="building-the-posner-cuing-task-experiment" class="section level2">
 <h2><span class="header-section-number">3.1</span> Building the Posner Cuing Task experiment</h2>
 <p><strong>Posner Cuing Task</strong></p>
-<p>Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials.</p>
+<p>Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left box by pressing the S key or the right box by pressing the K key. There will be a total of 20 trials.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="images/posner_task.png" alt="Time duration for each component of posner task."  />
 <p class="caption">
@@ -139,7 +139,7 @@ Figure 3.1: Time duration for each component of posner task.
 </div>
 <p>If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment.</p>
 <p>Before beginning, it’s helpful to know a little bit about how PsychoPy builder works.
-PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial. It’s best to create a separate folder for the experiment to contain all parts together (excel file, images, psyexp file) for consistency of pathways.</p>
+PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your experiment. In the excel file, each column represents a condition variable, and each row represents a trial. It’s best to create a separate folder for the experiment to contain all parts together (excel file, images, .psyexp file) for pathway consistencies.</p>
 <div id="excel" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Excel</h3>
 <p>Let’s start by creating the condition file on excel. For this task, we have three condition variables: condition type (valid, invalid), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. The positions are represented in the units <a href="https://www.psychopy.org/general/units.html">height</a>, which scales everything relative to height of the window (best for online experiments).</p>
@@ -154,7 +154,7 @@ Figure 3.2: Condition file for Posner Cuing Task.
 <h3><span class="header-section-number">3.1.2</span> Builder</h3>
 <p>Now that we have the condition file ready to go, we can create the other components of our routine through builder. Let’s break down the task into a timeline of events.</p>
 <p><strong>1. Fixation cross appears from 0s to end of trial</strong></p>
-<p>We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to 0.09 height units.</p>
+<p>We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to about 0.08 height units.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="images/fixation.png" alt="Fixation cross properties on builder."  />
 <p class="caption">
@@ -162,12 +162,14 @@ Figure 3.3: Fixation cross properties on builder.
 </p>
 </div>
 <p><strong>2. Two box appears 0.25s after fixation (start time 0.25s)</strong></p>
+Let’s start by drawing the left box. The start time is set to 0.25s, and we want to set the shape to rectangle for the boxes. The length and width is set to approximately 0.15 height units, and the x position is shifted to a negative value because it’s the left box. Remember that our boxes are need to be empty in the middle, and since we are not able to set a ‘transparent’ colour, we’re going to match the middle colour to the background colour (grey) to make it appear as transparent in the middle.
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
 <img src="images/left_square.png" alt="Left square properties on builder."  />
 <p class="caption">
 Figure 3.4: Left square properties on builder.
 </p>
 </div>
+The right box is identical to the left box, except the position is shifted to the right. Therefore, we can simply compy the component and paste it underneath. Remember to change the x position to a positive value to shift it to the right of the fixation cross.
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="images/copy_right.png" alt="Copying left square to create right square."  />
 <p class="caption">
@@ -175,6 +177,7 @@ Figure 3.5: Copying left square to create right square.
 </p>
 </div>
 <p><strong>3. Cue appears 0.50s after box (start time 0.75s)</strong></p>
+<p>Let’s create an image component to show the image of the cue. In our timeline, the cue appears at 0.75s and lasts 0.1s. In order to let PsychoPy know what and where the cue image is, we will paste the image pathway in the image box. The cue position variable is defined in the excel sheet, so we will put the name of that column in the x position box, and set it to repeate to indicate that it will update every trial.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="images/cue.png" alt="Cue image properties on builder."  />
 <p class="caption">
@@ -182,6 +185,7 @@ Figure 3.6: Cue image properties on builder.
 </p>
 </div>
 <p><strong>4. Target appears 0.10s after cue (start time 0.85s), target duration 2s or until response</strong></p>
+<p>We will create another image component for the Go image. The properties of this component are shown below.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
 <img src="images/go.png" alt="Go image properties on builder."  />
 <p class="caption">
@@ -189,6 +193,7 @@ Figure 3.7: Go image properties on builder.
 </p>
 </div>
 <p><strong>5. Record response key to end trial</strong></p>
+To let participants make a response, we will use the keyboard component and set the allowed keys to ‘s’ and ‘k’. To keep track of the right answers, click on the option that stores correct answers using the variable ‘correct’ from the excel sheet.
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
 <img src="images/key_resp.png" alt="response key properties on builder."  />
 <p class="caption">
@@ -198,6 +203,7 @@ Figure 3.8: response key properties on builder.
 </div>
 <div id="linking-excel-to-builder-using-a-loop" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Linking Excel to Builder using a loop</h3>
+<p>The loop allows us to randomize presentation of the conditions, and increase trial numbers. For this experiment, we have four trials in the excel file, repeated 5 times, resulting in a total of 20 trials.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="images/routine.png" alt="Routine flow and loop on builder ."  />
 <p class="caption">
@@ -211,31 +217,33 @@ Figure 3.9: Routine flow and loop on builder .
 <p>For online experiments, it’s especially important to have practice trials to make sure your participants understand the task properly. Today we will be creating a practice trial that provides feedback after every trial, and doesn’t let the participant continue to the actual trial until they’ve gotten atleast 2 correct answer.</p>
 We want to have our practice trial contain everything our real trial has. To accomplish this, we will copy and paste the entire routine using Menu –&gt; Copy Routine –&gt; Paste Routine. Name this routine something meaningful like practice.
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
-<img src="images/prac.png" alt="copying trial to create practice routine."  />
+<img src="images/prac.png" alt="Copying trial to create practice routine."  />
 <p class="caption">
-Figure 3.10: copying trial to create practice routine.
+Figure 3.10: Copying trial to create practice routine.
 </p>
 </div>
 <p>Next we will create another routine called Feedback, which will tell the participant whether they got the trial correct or incorrect. This routine should be placed right after the practice trial. We will link these two routines to the conditional file using a loop. By setting the repetitions to a really large number, we make sure the loop continues on until we define when it breaks.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
-<img src="images/prac_comp.png" alt="creating feedback routine and linking everything to condition file."  />
+<img src="images/prac_comp.png" alt="Creating feedback routine and linking everything to condition file."  />
 <p class="caption">
-Figure 3.11: creating feedback routine and linking everything to condition file.
+Figure 3.11: Creating feedback routine and linking everything to condition file.
 </p>
 </div>
-<p>Let’s return back to the practice trial and add a custom code component to define when the loop breaks (when participants can exit out of the practice trial).</p>
+<p>Let’s return back to the practice trial and add a custom code component to define when the loop breaks (when participants can exit out of the practice trial). Under Begin Experiment, we will set the total accuracy number to 0 at the start of the experiment. At the end of the routine, we want to use a conditional statement that adds 1 to total accuracy everytime a correct response is made, otherwise, total accuracy stays at 0. Once participants gets more than 2 correct responses, we will end the practice loop (ending practice trials).</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
-<img src="images/prac_code.png" alt="code component for practice trial"  />
+<img src="images/prac_code.png" alt="Code component for practice trial"  />
 <p class="caption">
-Figure 3.12: code component for practice trial
+Figure 3.12: Code component for practice trial
 </p>
 </div>
+<p>Using this code component, we will define the message that participants get when they are doing the practice trials. In the begin experiment section, we first define the variable ‘msg’. In the begin routine section, we will use another conditional statement that checks whether the response made was correct using our excel sheet, and then displays the message “correct” or “wrong”.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
-<img src="images/feedback_code.png" alt="code component for feedback message"  />
+<img src="images/feedback_code.png" alt="Code component for feedback message"  />
 <p class="caption">
-Figure 3.13: code component for feedback message
+Figure 3.13: Code component for feedback message
 </p>
 </div>
+<p>The above ‘msg’ varible is shown for 1 second using a text component, set to repeat every trial.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
 <img src="images/feedback_msg.png" alt="text component to show feedback message"  />
 <p class="caption">

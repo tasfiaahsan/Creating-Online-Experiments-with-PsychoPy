@@ -6,18 +6,17 @@
 
 Install [PsychoPy](https://www.psychopy.org) on your computer, which is what we will use to build our experiment.  
 
-
 ## **Hosting:** setting up [Pavlovia](https://www.pavlovia.org)
 
-You can go to Pavlovia by clicking the link above or access it directly through the PsychoPy interface as shown below.
+You can go to Pavlovia by clicking the link above or access it directly through the PsychoPy interface as shown below:
 
 ```{r, echo=FALSE, fig.cap="Accessing Pavlovia through PsychoPy."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/logging-pavlovia.png")
 ```
 
-Once you have gone to Pavlovia, create an account with your **yorku email address**. York University has an institutional licensing with Pavlovia that allows you to run all your studies **free of cost** under your york email address. 
+Once you have gone to Pavlovia, create an account with your **yorku email address**. York University has an institutional licensing with Pavlovia that allows you to run all your studies **free of cost** under the account associated with your yorku email. 
 
-Once you've created your Pavlovia account, we'll link your local computer to the Pavlovia repository through [gitlab](https://gitlab.pavlovia.org/) by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online. 
+Once you've created your Pavlovia account, we will link your local computer to the Pavlovia repository through [gitlab](https://gitlab.pavlovia.org/) by using a SSH key. A SSH key lets your computer securely communicate with gitlab so you can push your changes online. 
 
 To access SSH key setup: log onto gitlab using your credentials, then go to __settings__ and click __SSH key__ from the left hand menu bar.
 
@@ -42,7 +41,7 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 Press enter to choose the suggested path. Once the path is chosen, create a password (recommended), or press enter twice to skip creating a password. 
 
-Now that your key is generated, we will add it to the gitlab account.
+Now that your key is generated, add it to the gitlab account.
 
 First, copy your public SSH key by typing in the command below:
 
@@ -66,7 +65,6 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 [Qualtrics](https://www.qualtrics.com/) **(recommended)**: At this time, only full-time psychology professors have [access](https://psycentre.apps01.yorku.ca/wp/qualtrics/) to the licensed version of Qualtrics at York University. If you can request your supervisor to create an account for the lab and let you use it then this is most **optimal** option for online experiments. 
 
 [Google Forms](https://www.google.ca/forms/): Can be setup with any Google accounts.
-
 
 ## **Recruitment:** setting up recruitment websites (URPP, Prolific) 
 

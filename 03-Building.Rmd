@@ -10,7 +10,7 @@ output:
 
 **Posner Cuing Task**
 
-Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left by pressing the S key or the right box by pressing K key. There will be a total of 20 trials. 
+Participants will see a fixation cross in the middle and one box to the right and one box to the left. A cue will appear in one of the two boxes followed by a GO signal in either the same box as the cue (valid) or different place as the cue (invalid). Time duration for each segment is outlined in the picture below. Participants will be asked to decide as quickly and accurately as possible if they see the GO signal on the left box by pressing the S key or the right box by pressing the K key. There will be a total of 20 trials. 
 
 ```{r, echo=FALSE, fig.cap="Time duration for each component of posner task."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/posner_task.png")
@@ -19,7 +19,7 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 If you are familiar with PsychoPy builder then stop here and try to create the experiment based on the description above. If not, move forward to see instructions on how to create this experiment. 
 
 Before beginning, it's helpful to know a little bit about how PsychoPy builder works. 
-PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your expeirment. In the excel file, each column represents a condition variable, and each row represents a trial. It's best to create a separate folder for the experiment to contain all parts together (excel file, images, psyexp file) for consistency of pathways. 
+PsychoPy builder uses excel/csv files to read condtion variables while the builder interface is used for static components, and flow of your experiment. In the excel file, each column represents a condition variable, and each row represents a trial. It's best to create a separate folder for the experiment to contain all parts together (excel file, images, .psyexp file) for pathway consistencies. 
 
 ### Excel
 Let's start by creating the condition file on excel. For this task, we have three condition variables: condition type (valid, invalid), cue position (left, right), go signal position (left, right). We also have one extra column for the correct responses so we can track accuracy. The positions are represented in the units [height](https://www.psychopy.org/general/units.html), which scales everything relative to height of the window (best for online experiments).
@@ -33,7 +33,7 @@ Now that we have the condition file ready to go, we can create the other compone
 
 **1. Fixation cross appears from 0s to end of trial**
 
-We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to 0.09 height units.
+We will use the Text component to create the fixation cross. The start of the stimuli is set at 0.0s and the duration is left blank to allow it to run until the end of trial. The spatial units should be set to heights, and the letter height needs to be adjusted from the default to about 0.08 height units.
 
 ```{r, echo=FALSE, fig.cap="Fixation cross properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/fixation.png")
@@ -41,29 +41,40 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 **2. Two box appears 0.25s after fixation (start time 0.25s)**
 
+Let's start by drawing the left box. The start time is set to 0.25s, and we want to set the shape to rectangle for the boxes. The length and width is set to approximately 0.15 height units, and the x position is shifted to a negative value because it's the left box. Remember that our boxes are need to be empty in the middle, and since we are not able to set a 'transparent' colour, we're going to match the middle colour to the background colour (grey) to make it appear as transparent in the middle. 
 ```{r, echo=FALSE, fig.cap="Left square properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/left_square.png")
 ```
+
+The right box is identical to the left box, except the position is shifted to the right. Therefore, we can simply compy the component and paste it underneath. Remember to change the x position to a positive value to shift it to the right of the fixation cross.
 ```{r, echo=FALSE, fig.cap="Copying left square to create right square."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/copy_right.png")
 ```
 **3. Cue appears 0.50s after box (start time 0.75s)**
 
+Let's create an image component to show the image of the cue. In our timeline, the cue appears at 0.75s and lasts 0.1s. In order to let PsychoPy know what and where the cue image is, we will paste the image pathway in the image box. The cue position variable is defined in the excel sheet, so we will put the name of that column in the x position box, and set it to repeate to indicate that it will update every trial. 
+
 ```{r, echo=FALSE, fig.cap="Cue image properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/cue.png")
 ```
+
 **4. Target appears 0.10s after cue (start time 0.85s), target duration 2s or until response** 
+
+We will create another image component for the Go image. The properties of this component are shown below. 
 
 ```{r, echo=FALSE, fig.cap="Go image properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/go.png")
 ```
 **5. Record response key to end trial**
 
+To let participants make a response, we will use the keyboard component and set the allowed keys to 's' and 'k'. To keep track of the right answers, click on the option that stores correct answers using the variable 'correct' from the excel sheet. 
 ```{r, echo=FALSE, fig.cap="response key properties on builder."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/key_resp.png")
 ```
 
 ### Linking Excel to Builder using a loop
+
+The loop allows us to randomize presentation of the conditions, and increase trial numbers. For this experiment, we have four trials in the excel file, repeated 5 times, resulting in a total of 20 trials. 
 
 ```{r, echo=FALSE, fig.cap="Routine flow and loop on builder ."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/routine.png")
@@ -75,25 +86,29 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 For online experiments, it's especially important to have practice trials to make sure your participants understand the task properly. Today we will be creating a practice trial that provides feedback after every trial, and doesn't let the participant continue to the actual trial until they've gotten atleast 2 correct answer.
 
 We want to have our practice trial contain everything our real trial has. To accomplish this, we will copy and paste the entire routine using Menu --> Copy Routine --> Paste Routine. Name this routine something meaningful like practice. 
-```{r, echo=FALSE, fig.cap="copying trial to create practice routine."}
+```{r, echo=FALSE, fig.cap="Copying trial to create practice routine."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prac.png")
 ```
 Next we will create another routine called Feedback, which will tell the participant whether they got the trial correct or incorrect. This routine should be placed right after the practice trial. We will link these two routines to the conditional file using a loop. By setting the repetitions to a really large number, we make sure the loop continues on until we define when it breaks. 
 
-```{r, echo=FALSE, fig.cap="creating feedback routine and linking everything to condition file."}
+```{r, echo=FALSE, fig.cap="Creating feedback routine and linking everything to condition file."}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prac_comp.png")
 ```
 
-Let's return back to the practice trial and add a custom code component to define when the loop breaks (when participants can exit out of the practice trial).
+Let's return back to the practice trial and add a custom code component to define when the loop breaks (when participants can exit out of the practice trial). Under Begin Experiment, we will set the total accuracy number to 0 at the start of the experiment. At the end of the routine, we want to use a conditional statement that adds 1 to total accuracy everytime a correct response is made, otherwise, total accuracy stays at 0. Once participants gets more than 2 correct responses, we will end the practice loop (ending practice trials).
 
 
-```{r, echo=FALSE, fig.cap="code component for practice trial"}
+```{r, echo=FALSE, fig.cap="Code component for practice trial"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prac_code.png")
 ```
 
-```{r, echo=FALSE, fig.cap="code component for feedback message"}
+Using this code component, we will define the message that participants get when they are doing the practice trials. In the begin experiment section, we first define the variable 'msg'. In the begin routine section, we will use another conditional statement that checks whether the response made was correct using our excel sheet, and then displays the message "correct" or "wrong". 
+
+```{r, echo=FALSE, fig.cap="Code component for feedback message"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/feedback_code.png")
 ```
+The above 'msg' varible is shown for 1 second using a text component, set to repeat every trial.
+
 ```{r, echo=FALSE, fig.cap="text component to show feedback message"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/feedback_msg.png")
 ```

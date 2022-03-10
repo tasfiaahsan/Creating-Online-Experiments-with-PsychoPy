@@ -87,9 +87,9 @@
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-practice-trials"><i class="fa fa-check"></i><b>3.2</b> Adding Practice Trials</a></li>
 <li class="chapter" data-level="3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-instructions-transition-and-goodbye-screen"><i class="fa fa-check"></i><b>3.3</b> Adding instructions, transition and goodbye screen</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#instruction-screen"><i class="fa fa-check"></i><b>3.3.1</b> Instruction screen:</a></li>
-<li class="chapter" data-level="3.3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#transition-screen"><i class="fa fa-check"></i><b>3.3.2</b> Transition screen:</a></li>
-<li class="chapter" data-level="3.3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#goodbye-screen"><i class="fa fa-check"></i><b>3.3.3</b> Goodbye screen:</a></li>
+<li class="chapter" data-level="3.3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#instruction-screen"><i class="fa fa-check"></i><b>3.3.1</b> Instruction screen</a></li>
+<li class="chapter" data-level="3.3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#transition-screen"><i class="fa fa-check"></i><b>3.3.2</b> Transition screen</a></li>
+<li class="chapter" data-level="3.3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#goodbye-screen"><i class="fa fa-check"></i><b>3.3.3</b> Goodbye screen</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="hosting-pavlovia.html"><a href="hosting-pavlovia.html"><i class="fa fa-check"></i><b>4</b> <strong>Hosting:</strong> Pavlovia</a><ul>
@@ -134,15 +134,15 @@
 </div>
 <div id="hosting-setting-up-pavlovia" class="section level2">
 <h2><span class="header-section-number">2.2</span> <strong>Hosting:</strong> setting up <a href="https://www.pavlovia.org">Pavlovia</a></h2>
-<p>You can go to Pavlovia by clicking the link above or access it directly through the PsychoPy interface as shown below.</p>
+<p>You can go to Pavlovia by clicking the link above or access it directly through the PsychoPy interface as shown below:</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="images/logging-pavlovia.png" alt="Accessing Pavlovia through PsychoPy."  />
 <p class="caption">
 Figure 2.1: Accessing Pavlovia through PsychoPy.
 </p>
 </div>
-<p>Once you have gone to Pavlovia, create an account with your <strong>yorku email address</strong>. York University has an institutional licensing with Pavlovia that allows you to run all your studies <strong>free of cost</strong> under your york email address.</p>
-<p>Once you’ve created your Pavlovia account, we’ll link your local computer to the Pavlovia repository through <a href="https://gitlab.pavlovia.org/">gitlab</a> by using an SSH key. An SSH key lets your computer securely communicate with gitlab so you can push your changes online.</p>
+<p>Once you have gone to Pavlovia, create an account with your <strong>yorku email address</strong>. York University has an institutional licensing with Pavlovia that allows you to run all your studies <strong>free of cost</strong> under the account associated with your yorku email.</p>
+<p>Once you’ve created your Pavlovia account, we will link your local computer to the Pavlovia repository through <a href="https://gitlab.pavlovia.org/">gitlab</a> by using a SSH key. A SSH key lets your computer securely communicate with gitlab so you can push your changes online.</p>
 <p>To access SSH key setup: log onto gitlab using your credentials, then go to <strong>settings</strong> and click <strong>SSH key</strong> from the left hand menu bar.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="images/settings.png" alt="Finding setting on gitlab."  />
@@ -167,7 +167,7 @@ Figure 2.4: Command line for generating RSA key pair.
 </p>
 </div>
 <p>Press enter to choose the suggested path. Once the path is chosen, create a password (recommended), or press enter twice to skip creating a password.</p>
-<p>Now that your key is generated, we will add it to the gitlab account.</p>
+<p>Now that your key is generated, add it to the gitlab account.</p>
 <p>First, copy your public SSH key by typing in the command below:</p>
 <p><strong>macOS:</strong>
 pbcopy &lt; ~/.ssh/id_ed25519.pub</p>
