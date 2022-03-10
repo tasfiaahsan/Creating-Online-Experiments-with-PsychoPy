@@ -6,7 +6,8 @@ Let's try to push our current experiment to Pavlovia by clicking either of the t
 ```{r, echo=FALSE, fig.cap="pushing experiment to pavlovia"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/pushing.png")
 ```
-If you pushed the first button, you should see a warning screen open uo as shown below. All PyschoPy experiments are set to Inactive by default so we ened to click on the experiment page and set it to running. Then we are able to run the experiment by clicking the link or the run button. 
+If you pushed the first button, you should see a warning screen open up as shown below. All PyschoPy experiments are set to Inactive by default so we ened to click on the experiment page and set it to running. Then we are able to run the experiment by clicking the link or the run button. 
 ```{r, echo=FALSE, fig.cap="changing experiment to running"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/pavlovia_run.png")
 ```
+

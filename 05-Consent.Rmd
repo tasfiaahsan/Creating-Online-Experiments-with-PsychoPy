@@ -65,6 +65,13 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 Benefit: automatic crediting, clean presentation. 
 Drawback: paid through institutional license 
 
+<span style="color:Coral"><font size="4">
+**Example of [consent form](https://yorkufoh.ca1.qualtrics.com/jfe/form/SV_dj4fJLAl9Fe5PNA) done through Qualtrics**
+</font></style>
+
+
+
+
 ## Adding consent form through PsychoPy
 
 Fitting large bundles of text into PsychoPy can get very messy. The best way to do it is to take a screenshot of the consent form (consent_form.png) and scale the image to fit the screen. Then we can surround it with text on the top and bottom to ask them to read the consent, press 'y' to consent, or press 'escape' key to exit out of screen. 
@@ -94,6 +101,11 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 Pro: Free
 Con: looks very chunky, requires more techincal skills to get demographics (custom code).
 
+<span style="color:Coral"><font size="4">
+**Example of [consent form](https://run.pavlovia.org/Ahsant13/posner_online/) done through PsychoPy**
+</font></style> 
+
+
 ## Adding consent form through [Google Forms](https://www.google.ca/forms/about/)
 
 Sign into Google Forms --> Start a new Blank form
@@ -122,6 +134,12 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 Pro: Free. Clean presentation, keeps demographics and consent information separate from data.
 Con: participants need to click on link to go to experiment. Manual crediting for participation. 
+
+<span style="color:Coral"><font size="4">
+**Example of [consent form](https://docs.google.com/forms/d/e/1FAIpQLSe7X2-_QT-aO43G-Rl840dx5t4tJja4rU2AKUcr4fgao8FarQ/viewform?usp=sf_link) done through Google Form**
+</font></style>
+
+
 
 
 
