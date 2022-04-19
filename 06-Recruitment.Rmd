@@ -8,14 +8,16 @@ We have set up all our websites separtely, now we will link all of them together
 
 Below are the steps required at each website to link everything together. 
 
-URPP:
+**URPP:**
+
 1. Create a new study in URPP
 2. Under 'Study URL: paste Qualtrics survey link ending in ?id=%SURVEY_CODE%. This will pass the URPP code to Qualtrics through the variable id. 
 ```{r, echo=FALSE, fig.cap="URL ending, URPP"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/survey_code.png")
 ```
 
-Qualtrics:
+**Qualtrics:**
+
 1. Go onto URPP code, right click to open options and select default choices
 2. Add a new embedded data element, type in id as a variable and click insert. This will allow Qualtrics to recongize the Participant's ID as the variable id.
 ```{r, echo=FALSE, fig.cap="embedded data field, Qualtrics"}
@@ -26,7 +28,8 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/qualtrics_urpp_end.png")
 ```
 
-URPP:
+**URPP:**
+
 1. Go to study page and copy the link under 'Qualtrics Redirect to a URL'.
 2. Return to PsychoPy, and click on Experimenter Settings --> Online tab
 3. In 'Completed URL' enter the URPP link and change ${e://Field/id} with "+expInfo['participant']" This changes the participant ID variable from 'participant' back to 'id' so URPP can recognize it and give credit to the participant.  
@@ -39,7 +42,8 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 ### URPP --> Pavlovia --> URPP: Automatic Process
 
-URPP:
+**URPP:**
+
 1. Create a new study in URPP
 2. Under 'Study URL: paste Pavlovia study URL ending in ?participant=%SURVEY_CODE%. This will pass the URPP code to Pavlovia through the variable 'participant'. 
 3. Go to study page and copy the URPP completeion URL
@@ -48,7 +52,8 @@ URPP:
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_pavlovia.png")
 ```
 
-PsychoPy:
+**PsychoPy:**
+
 4. Click on Experimenter Settings on PsychoPy --> Online tab
 5. Paste the URPP completion URL and add "+expInfo['participant']" to end of it. This allows URPP and PsychoPy to communicate the participant ID through the variable 'participant' 
 6. Don't forget to push the changes from PsychoPy to Pavlovia!
@@ -61,15 +66,17 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 
 ### Prolific --> Qualtrics --> Pavlovia --> Prolific: Automatic Process
 
-Prolific:
+**Prolific:**
+
 1. Create a new study in Prolific
 2. Under 'What is the URL of your study?': paste Qualtrics survey link and click on 'I'll use URL parameters'. which will add the parameters to the end of the Qualtrics URL automatically.
-3. Click on 'Configure parameters' and change PROLIFIC PID --> participant,STUDY ID --> study_id, and SESSION ID --> session, respectively. This will translate the default prolific variable names to those used in Qualtrics and PsychoPy.
+3. Click on 'Configure parameters' and change PROLIFIC PID --> participant, STUDY ID --> study_id, and SESSION ID --> session, respectively. This will translate the default prolific variable names to those used in Qualtrics and PsychoPy.
 ```{r, echo=FALSE, fig.cap="URL ending, Prolific"}
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prolific_param.png")
 ```
 
-Qualtrics:
+**Qualtrics:**
+
 1. Go onto Prolific code section, right click to open options and select default choices
 2. Add a new embedded data element, type in 'participant' as a variable and click insert. This will allow Qualtrics to recongize the Participant's ID as the variable 'participant'.
 ```{r, echo=FALSE, fig.cap="embedded data field, Qualtrics"}
@@ -80,7 +87,8 @@ knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-Psy
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/end_prolific.png")
 ```
 
-Prolific:
+**Prolific:**
+
 1. Go back to your study on Prolific, under 'Study completion' click on the option 'I'll redirect them using a URL' and copy the link below. 
 2. Return to PsychoPy, and click on Experimenter Settings --> Online tab
 3. In 'Completed URL' enter the Prolific completion link and push your changes to Pavlovia! 
