@@ -24,7 +24,7 @@
 <meta name="author" content="Tasfia Ahsan [ahsant@my.yorku.ca, York University]" />
 
 
-<meta name="date" content="2022-03-10" />
+<meta name="date" content="2022-04-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -104,6 +104,9 @@
 <li class="chapter" data-level="6.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-sona-undergraduate-research-participant-pool-urpp"><i class="fa fa-check"></i><b>6.1</b> Recruiting from SONA: Undergraduate Research Participant Pool <span>URPP</span></a><ul>
 <li class="chapter" data-level="6.1.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#urpp-qualtrics-pavlovia-urpp-automatic-process"><i class="fa fa-check"></i><b>6.1.1</b> URPP –&gt; Qualtrics –&gt; Pavlovia –&gt; URPP: Automatic Process</a></li>
 <li class="chapter" data-level="6.1.2" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#urpp-pavlovia-urpp-automatic-process"><i class="fa fa-check"></i><b>6.1.2</b> URPP –&gt; Pavlovia –&gt; URPP: Automatic Process</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-prolific"><i class="fa fa-check"></i><b>6.2</b> Recruiting from <span>Prolific</span></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#prolific-qualtrics-pavlovia-prolific-automatic-process"><i class="fa fa-check"></i><b>6.2.1</b> Prolific –&gt; Qualtrics –&gt; Pavlovia –&gt; Prolific: Automatic Process</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -192,6 +195,50 @@ Figure 6.5: URL ending, PsychoPy
 <img src="images/urpp_psychopy.png" alt="URL ending, PsychoPy"  />
 <p class="caption">
 Figure 6.6: URL ending, PsychoPy
+</p>
+</div>
+</div>
+</div>
+<div id="recruiting-from-prolific" class="section level2">
+<h2><span class="header-section-number">6.2</span> Recruiting from <a href="https://www.prolific.co/">Prolific</a></h2>
+<div id="prolific-qualtrics-pavlovia-prolific-automatic-process" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Prolific –&gt; Qualtrics –&gt; Pavlovia –&gt; Prolific: Automatic Process</h3>
+Prolific:
+1. Create a new study in Prolific
+2. Under ‘What is the URL of your study?’: paste Qualtrics survey link and click on ‘I’ll use URL parameters’. which will add the parameters to the end of the Qualtrics URL automatically.
+3. Click on ‘Configure parameters’ and change PROLIFIC PID –&gt; participant,STUDY ID –&gt; study_id, and SESSION ID –&gt; session, respectively. This will translate the default prolific variable names to those used in Qualtrics and PsychoPy.
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="images/prolific_param.png" alt="URL ending, Prolific"  />
+<p class="caption">
+Figure 6.7: URL ending, Prolific
+</p>
+</div>
+Qualtrics:
+1. Go onto Prolific code section, right click to open options and select default choices
+2. Add a new embedded data element, type in ‘participant’ as a variable and click insert. This will allow Qualtrics to recongize the Participant’s ID as the variable ‘participant’.
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="images/prolific_code.png" alt="embedded data field, Qualtrics"  />
+<p class="caption">
+Figure 6.8: embedded data field, Qualtrics
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Go to end of the survey, select ‘Redirect to URL’ and add ?participant=${e://Field/participant} at end of the Pavlovia URL of your experiment.
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="images/end_prolific.png" alt="URL ending, Qualtrics"  />
+<p class="caption">
+Figure 6.9: URL ending, Qualtrics
+</p>
+</div></li>
+</ol>
+<p>Prolific:
+1. Go back to your study on Prolific, under ‘Study completion’ click on the option ‘I’ll redirect them using a URL’ and copy the link below.
+2. Return to PsychoPy, and click on Experimenter Settings –&gt; Online tab
+3. In ‘Completed URL’ enter the Prolific completion link and push your changes to Pavlovia!</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="images/psychopy_prolific.png" alt="Study Completion, PsychoPy"  />
+<p class="caption">
+Figure 6.10: Study Completion, PsychoPy
 </p>
 </div>
 

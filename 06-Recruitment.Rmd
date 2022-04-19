@@ -57,3 +57,34 @@ PsychoPy:
 knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/urpp_psychopy.png")
 ```
 
+## Recruiting from [Prolific](https://www.prolific.co/)
+
+### Prolific --> Qualtrics --> Pavlovia --> Prolific: Automatic Process
+
+Prolific:
+1. Create a new study in Prolific
+2. Under 'What is the URL of your study?': paste Qualtrics survey link and click on 'I'll use URL parameters'. which will add the parameters to the end of the Qualtrics URL automatically.
+3. Click on 'Configure parameters' and change PROLIFIC PID --> participant,STUDY ID --> study_id, and SESSION ID --> session, respectively. This will translate the default prolific variable names to those used in Qualtrics and PsychoPy.
+```{r, echo=FALSE, fig.cap="URL ending, Prolific"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prolific_param.png")
+```
+
+Qualtrics:
+1. Go onto Prolific code section, right click to open options and select default choices
+2. Add a new embedded data element, type in 'participant' as a variable and click insert. This will allow Qualtrics to recongize the Participant's ID as the variable 'participant'.
+```{r, echo=FALSE, fig.cap="embedded data field, Qualtrics"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/prolific_code.png")
+```
+4. Go to end of the survey, select 'Redirect to URL' and add ?participant=${e://Field/participant} at end of the Pavlovia URL of your experiment.
+```{r, echo=FALSE, fig.cap="URL ending, Qualtrics"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/end_prolific.png")
+```
+
+Prolific:
+1. Go back to your study on Prolific, under 'Study completion' click on the option 'I'll redirect them using a URL' and copy the link below. 
+2. Return to PsychoPy, and click on Experimenter Settings --> Online tab
+3. In 'Completed URL' enter the Prolific completion link and push your changes to Pavlovia! 
+
+```{r, echo=FALSE, fig.cap="Study Completion, PsychoPy"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/psychopy_prolific.png")
+```
