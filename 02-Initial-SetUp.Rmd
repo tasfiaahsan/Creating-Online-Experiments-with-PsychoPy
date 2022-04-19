@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Initial Setup
 
 **Resources** for this experiment can be found [here](https://drive.google.com/drive/folders/1SrTXSM9n9Ot9OpjQYqxAGZwO3b4I9CQZ?usp=sharing). Please download it before continuing to the next sections.
