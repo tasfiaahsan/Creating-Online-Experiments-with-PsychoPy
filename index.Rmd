@@ -7,7 +7,12 @@ site: bookdown::bookdown_site
 
 # Overview
 
-When we carry out an in-person experiment, we have four components: 
+All experiments contain four essential parts: 
+```{r, echo=FALSE}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/experiments.png")
+```
+
+For in-person experiments, the four components are: 
 
 - **Building:** experiment building program (i.e., MATLAB, PsychoPy)
 - **Hosting:** usually carried out in a lab
