@@ -25,6 +25,47 @@ Below is the standard York University consent form template. We will be implemen
 ***Legal Rights and Signatures:*** By checking the box below you consent to participate in the research project entitled: --name of project-- conducted by --name of investigator--, and indicate that you have understood the nature of this project and wish to participate. You also approve that the data obtained in the experiment might be uploaded to an open external repository to promote collaborative scientific efforts. The data will be anonymized and your identity will not be revealed. You are not waiving any of your legal rights by indicating consent.
 >
 
+## Adding consent form through Pavlovia Survey
+
+Pavlovia Survey is a survey platform that can be easily intergrated to your psychopy builder experiment.
+
+```{r, echo=FALSE, fig.cap="Survey creation, Pavlovia Dashboard"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/psurvey_open.png")
+```
+
+Click on add a new question, and select html as the option. We want to paste the html code for our consent form over here so it shows up as a nice document. 
+
+```{r, echo=FALSE, fig.cap="consent form in html, Pavlovia Survey"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/pick_html.png")
+```
+Pro-tip: you can put your consent form on google doc, and then download the html zip file for a simple way of copying over html code. 
+
+Add another question right below the consent form that will allow the question to click on an option to consent. Make this question required, so participants must select this option to move on to the actual experiment. 
+
+```{r, echo=FALSE, fig.cap="Adding consent form and option to consent, Pavlovia Survey"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/consent_q.png")
+```
+
+Now that we have the consent form done, we can add any relevant demographic information just by adding questions as necessary.
+
+```{r, echo=FALSE, fig.cap="Collecting demographic infromation, Pavlovia Survey"}
+knitr::include_graphics("/Users/tasfiaahsan/Creating-Online-Experiments-with-PsychoPy/images/demographic_q.png")
+```
+After you're happy with your survey, click Save and return to your PsychoPy Builder view, where we will add the survey we just created at the beginning of the experiment. 
+
+
+
+
+
+Pro: Free, both consent form and experiment within same program so let's switching around
+
+
+
+<span style="color:DeepPink"><font size="5">
+**Example of [consent form](https://run.pavlovia.org/Ahsant13/posner_online/) done through PsychoPy**
+</font></style> 
+
+
 ## Adding consent form through [Qualtrics](https://www.qualtrics.com/)
 
 Sign into Qualtrics, Create a new project --> Survey

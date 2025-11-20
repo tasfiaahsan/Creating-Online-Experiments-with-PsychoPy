@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Consent: Implementing consent form and demographics | Creating Online Experiments</title>
   <meta name="description" content="Chapter 5 Consent: Implementing consent form and demographics | Creating Online Experiments" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Consent: Implementing consent form and demographics | Creating Online Experiments" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Tasfia Ahsan [ahsant@my.yorku.ca, York University]" />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2025-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,7 @@
   
 <link rel="prev" href="hosting-pavlovia.html"/>
 <link rel="next" href="recruitment-recruiting-participants-and-collecting-data-online.html"/>
-<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,11 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -73,39 +77,49 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
-<li class="chapter" data-level="2" data-path="initial-setup.html"><a href="initial-setup.html"><i class="fa fa-check"></i><b>2</b> Initial Setup</a><ul>
-<li class="chapter" data-level="2.1" data-path="initial-setup.html"><a href="initial-setup.html#building-setting-up-psychopy"><i class="fa fa-check"></i><b>2.1</b> <strong>Building:</strong> setting up <span>PsychoPy</span></a></li>
-<li class="chapter" data-level="2.2" data-path="initial-setup.html"><a href="initial-setup.html#hosting-setting-up-pavlovia"><i class="fa fa-check"></i><b>2.2</b> <strong>Hosting:</strong> setting up <span>Pavlovia</span></a></li>
+<li class="chapter" data-level="2" data-path="initial-setup.html"><a href="initial-setup.html"><i class="fa fa-check"></i><b>2</b> Initial Setup</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="initial-setup.html"><a href="initial-setup.html#building-setting-up-psychopy"><i class="fa fa-check"></i><b>2.1</b> <strong>Building:</strong> setting up PsychoPy</a></li>
+<li class="chapter" data-level="2.2" data-path="initial-setup.html"><a href="initial-setup.html#hosting-setting-up-pavlovia"><i class="fa fa-check"></i><b>2.2</b> <strong>Hosting:</strong> setting up Pavlovia</a></li>
 <li class="chapter" data-level="2.3" data-path="initial-setup.html"><a href="initial-setup.html#consent-setting-up-consent-form-through-survey-website-qualtrics-google-form."><i class="fa fa-check"></i><b>2.3</b> <strong>Consent:</strong> setting up consent form through survey website (Qualtrics, Google Form).</a></li>
 <li class="chapter" data-level="2.4" data-path="initial-setup.html"><a href="initial-setup.html#recruitment-setting-up-recruitment-websites-urpp-prolific"><i class="fa fa-check"></i><b>2.4</b> <strong>Recruitment:</strong> setting up recruitment websites (URPP, Prolific)</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html"><i class="fa fa-check"></i><b>3</b> <strong>Building:</strong> PsychoPy Builder Interface</a><ul>
-<li class="chapter" data-level="3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#building-the-posner-cuing-task-experiment"><i class="fa fa-check"></i><b>3.1</b> Building the Posner Cuing Task experiment</a><ul>
+<li class="chapter" data-level="3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html"><i class="fa fa-check"></i><b>3</b> <strong>Building:</strong> PsychoPy Builder Interface</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#building-the-posner-cuing-task-experiment"><i class="fa fa-check"></i><b>3.1</b> Building the Posner Cuing Task experiment</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#excel"><i class="fa fa-check"></i><b>3.1.1</b> Excel</a></li>
 <li class="chapter" data-level="3.1.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#builder"><i class="fa fa-check"></i><b>3.1.2</b> Builder</a></li>
 <li class="chapter" data-level="3.1.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#linking-excel-to-builder-using-a-loop"><i class="fa fa-check"></i><b>3.1.3</b> Linking Excel to Builder using a loop</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-practice-trials"><i class="fa fa-check"></i><b>3.2</b> Adding Practice Trials</a></li>
-<li class="chapter" data-level="3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-instructions-transition-and-goodbye-screen"><i class="fa fa-check"></i><b>3.3</b> Adding instructions, transition and goodbye screen</a><ul>
+<li class="chapter" data-level="3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#adding-instructions-transition-and-goodbye-screen"><i class="fa fa-check"></i><b>3.3</b> Adding instructions, transition and goodbye screen</a>
+<ul>
 <li class="chapter" data-level="3.3.1" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#instruction-screen"><i class="fa fa-check"></i><b>3.3.1</b> Instruction screen</a></li>
 <li class="chapter" data-level="3.3.2" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#transition-screen"><i class="fa fa-check"></i><b>3.3.2</b> Transition screen</a></li>
 <li class="chapter" data-level="3.3.3" data-path="building-psychopy-builder-interface.html"><a href="building-psychopy-builder-interface.html#goodbye-screen"><i class="fa fa-check"></i><b>3.3.3</b> Goodbye screen</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="hosting-pavlovia.html"><a href="hosting-pavlovia.html"><i class="fa fa-check"></i><b>4</b> <strong>Hosting:</strong> Pavlovia</a><ul>
+<li class="chapter" data-level="4" data-path="hosting-pavlovia.html"><a href="hosting-pavlovia.html"><i class="fa fa-check"></i><b>4</b> <strong>Hosting:</strong> Pavlovia</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="hosting-pavlovia.html"><a href="hosting-pavlovia.html#pushing-the-posner-cuing-task-online"><i class="fa fa-check"></i><b>4.1</b> Pushing the Posner Cuing Task online</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html"><i class="fa fa-check"></i><b>5</b> <strong>Consent:</strong> Implementing consent form and demographics</a><ul>
-<li class="chapter" data-level="5.1" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-qualtrics"><i class="fa fa-check"></i><b>5.1</b> Adding consent form through <span>Qualtrics</span></a></li>
-<li class="chapter" data-level="5.2" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-psychopy"><i class="fa fa-check"></i><b>5.2</b> Adding consent form through PsychoPy</a></li>
-<li class="chapter" data-level="5.3" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-google-forms"><i class="fa fa-check"></i><b>5.3</b> Adding consent form through <span>Google Forms</span></a></li>
+<li class="chapter" data-level="5" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html"><i class="fa fa-check"></i><b>5</b> <strong>Consent:</strong> Implementing consent form and demographics</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-pavlovia-survey"><i class="fa fa-check"></i><b>5.1</b> Adding consent form through Pavlovia Survey</a></li>
+<li class="chapter" data-level="5.2" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-qualtrics"><i class="fa fa-check"></i><b>5.2</b> Adding consent form through Qualtrics</a></li>
+<li class="chapter" data-level="5.3" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-psychopy"><i class="fa fa-check"></i><b>5.3</b> Adding consent form through PsychoPy</a></li>
+<li class="chapter" data-level="5.4" data-path="consent-implementing-consent-form-and-demographics.html"><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-google-forms"><i class="fa fa-check"></i><b>5.4</b> Adding consent form through Google Forms</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html"><i class="fa fa-check"></i><b>6</b> <strong>Recruitment:</strong> recruiting participants and collecting data online</a><ul>
-<li class="chapter" data-level="6.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-sona-undergraduate-research-participant-pool-urpp"><i class="fa fa-check"></i><b>6.1</b> Recruiting from SONA: Undergraduate Research Participant Pool <span>URPP</span></a><ul>
+<li class="chapter" data-level="6" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html"><i class="fa fa-check"></i><b>6</b> <strong>Recruitment:</strong> recruiting participants and collecting data online</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-sona-undergraduate-research-participant-pool-urpp"><i class="fa fa-check"></i><b>6.1</b> Recruiting from SONA: Undergraduate Research Participant Pool URPP</a>
+<ul>
 <li class="chapter" data-level="6.1.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#urpp-qualtrics-pavlovia-urpp-automatic-process"><i class="fa fa-check"></i><b>6.1.1</b> URPP –&gt; Qualtrics –&gt; Pavlovia –&gt; URPP: Automatic Process</a></li>
 <li class="chapter" data-level="6.1.2" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#urpp-pavlovia-urpp-automatic-process"><i class="fa fa-check"></i><b>6.1.2</b> URPP –&gt; Pavlovia –&gt; URPP: Automatic Process</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-prolific"><i class="fa fa-check"></i><b>6.2</b> Recruiting from <span>Prolific</span></a><ul>
+<li class="chapter" data-level="6.2" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#recruiting-from-prolific"><i class="fa fa-check"></i><b>6.2</b> Recruiting from Prolific</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="recruitment-recruiting-participants-and-collecting-data-online.html"><a href="recruitment-recruiting-participants-and-collecting-data-online.html#prolific-qualtrics-pavlovia-prolific-automatic-process"><i class="fa fa-check"></i><b>6.2.1</b> Prolific –&gt; Qualtrics –&gt; Pavlovia –&gt; Prolific: Automatic Process</a></li>
 </ul></li>
 </ul></li>
@@ -128,8 +142,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="consent-implementing-consent-form-and-demographics" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> <strong>Consent:</strong> Implementing consent form and demographics</h1>
+<div id="consent-implementing-consent-form-and-demographics" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> <strong>Consent:</strong> Implementing consent form and demographics<a href="consent-implementing-consent-form-and-demographics.html#consent-implementing-consent-form-and-demographics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Below is the standard York University consent form template. We will be implementing this into our experiment today.</p>
 <blockquote>
 <p><strong><em>Informed Consent Form</em></strong> – Name of Study</p>
@@ -144,49 +158,87 @@
 <p><strong><em>Questions about the research?</em></strong> Indicate that if a research participant has questions about the research in general or their role in the study that they should contact the researcher or their supervisor. Provide the supervisor’s name and telephone number and/or email address. Indicate that the graduate program office may also be contacted. Provide the contact information for the graduate program office. Include the following required text: “This research has been reviewed and approved by the Human Participants Review Sub-Committee, York University’s Ethics Review Board and conforms to the standards of the Canadian Tri-Council Research Ethics guidelines. If you have any questions about this process, or about your rights as a participant in the study, your may contact the Senior Manager and Policy Advisor for the Office of Research Ethics, 5th Floor, York Research Tower, York University, telephone 416-736-5914 or e-mail <a href="mailto:ore@yorku.ca" class="email">ore@yorku.ca</a>”</p>
 <p><strong><em>Legal Rights and Signatures:</em></strong> By checking the box below you consent to participate in the research project entitled: –name of project– conducted by –name of investigator–, and indicate that you have understood the nature of this project and wish to participate. You also approve that the data obtained in the experiment might be uploaded to an open external repository to promote collaborative scientific efforts. The data will be anonymized and your identity will not be revealed. You are not waiving any of your legal rights by indicating consent.</p>
 </blockquote>
-<div id="adding-consent-form-through-qualtrics" class="section level2">
-<h2><span class="header-section-number">5.1</span> Adding consent form through <a href="https://www.qualtrics.com/">Qualtrics</a></h2>
+<div id="adding-consent-form-through-pavlovia-survey" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Adding consent form through Pavlovia Survey<a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-pavlovia-survey" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pavlovia Survey is a survey platform that can be easily intergrated to your psychopy builder experiment.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="images/psurvey_open.png" alt="Survey creation, Pavlovia Dashboard" width="1072" />
+<p class="caption">
+Figure 5.1: Survey creation, Pavlovia Dashboard
+</p>
+</div>
+<p>Click on add a new question, and select html as the option. We want to paste the html code for our consent form over here so it shows up as a nice document.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/pick_html.png" alt="consent form in html, Pavlovia Survey" width="1072" />
+<p class="caption">
+Figure 5.2: consent form in html, Pavlovia Survey
+</p>
+</div>
+<p>Pro-tip: you can put your consent form on google doc, and then download the html zip file for a simple way of copying over html code.</p>
+<p>Add another question right below the consent form that will allow the question to click on an option to consent. Make this question required, so participants must select this option to move on to the actual experiment.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/consent_q.png" alt="Adding consent form and option to consent, Pavlovia Survey" width="1084" />
+<p class="caption">
+Figure 5.3: Adding consent form and option to consent, Pavlovia Survey
+</p>
+</div>
+<p>Now that we have the consent form done, we can add any relevant demographic information just by adding questions as necessary.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/demographic_q.png" alt="Collecting demographic infromation, Pavlovia Survey" width="1072" />
+<p class="caption">
+Figure 5.4: Collecting demographic infromation, Pavlovia Survey
+</p>
+</div>
+<p>After you’re happy with your survey, click Save and return to your PsychoPy Builder view, where we will add the survey we just created at the beginning of the experiment.</p>
+<p>Pro: Free, both consent form and experiment within same program so let’s switching around</p>
+<span style="color:DeepPink"><font size="5">
+<strong>Example of <a href="https://run.pavlovia.org/Ahsant13/posner_online/">consent form</a> done through PsychoPy</strong>
+</font>
+</style>
+</div>
+<div id="adding-consent-form-through-qualtrics" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Adding consent form through <a href="https://www.qualtrics.com/">Qualtrics</a><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-qualtrics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sign into Qualtrics, Create a new project –&gt; Survey</p>
 <ol style="list-style-type: decimal">
 <li>The first question will set up the participant to input their unique identification number (Participant ID). For instance, participants coming from SONA would put in their URPP code. This is important to annonymously keep track of participants and their data.</li>
 </ol>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="images/Q1.png" alt="identification code, Qualtrics"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="images/Q1.png" alt="identification code, Qualtrics" width="1125" />
 <p class="caption">
-Figure 5.1: identification code, Qualtrics
+Figure 5.5: identification code, Qualtrics
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
 <li>The next question will be the consent form. This question should be in a multiple choice format with only one choice, and forced response requirement. Setting up this way requires the participant to actively interact with the consent form (click to consent) in order to move to the experiment.</li>
 </ol>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="images/Q2.png" alt="consent form, Qualtrics"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="images/Q2.png" alt="consent form, Qualtrics" width="1345" />
 <p class="caption">
-Figure 5.2: consent form, Qualtrics
+Figure 5.6: consent form, Qualtrics
 </p>
 </div>
 <p>The next two questions are there to collect demographic informaiton, so they are optional.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Collecting age information
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="images/Q3.png" alt="age information, Qualtrics"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="images/Q3.png" alt="age information, Qualtrics" width="1494" />
 <p class="caption">
-Figure 5.3: age information, Qualtrics
+Figure 5.7: age information, Qualtrics
 </p>
 </div></li>
 <li>Collecting gender information
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="images/Q4.png" alt="gender information, Qualtrics"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="images/Q4.png" alt="gender information, Qualtrics" width="1485" />
 <p class="caption">
-Figure 5.4: gender information, Qualtrics
+Figure 5.8: gender information, Qualtrics
 </p>
 </div></li>
 </ol>
 <p>At the end of the survey, we want to redirect the participant to the experiment. Select End of Survey –&gt; Redirect to URL: paste the link of your experiment in the box below (will be edited in Chapter 5 for automatic crediting).</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
-<img src="images/end_of_survey.png" alt="end of survey, Qualtrics"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="images/end_of_survey.png" alt="end of survey, Qualtrics" width="1512" />
 <p class="caption">
-Figure 5.5: end of survey, Qualtrics
+Figure 5.9: end of survey, Qualtrics
 </p>
 </div>
 <p>Pro: automatic crediting, clean presentation.</p>
@@ -196,34 +248,34 @@ Figure 5.5: end of survey, Qualtrics
 </font>
 </style>
 </div>
-<div id="adding-consent-form-through-psychopy" class="section level2">
-<h2><span class="header-section-number">5.2</span> Adding consent form through PsychoPy</h2>
+<div id="adding-consent-form-through-psychopy" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Adding consent form through PsychoPy<a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-psychopy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Fitting large bundles of text into PsychoPy can get very messy. The best way to do it is to take a screenshot of the consent form (consent_form.png) and scale the image to fit the screen. Then we can surround it with text on the top and bottom to ask them to read the consent, press ‘y’ to consent, or press ‘escape’ key to exit out of screen.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="images/consent_image.png" alt="consent form, PsychoPy"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="images/consent_image.png" alt="consent form, PsychoPy" width="1455" />
 <p class="caption">
-Figure 5.6: consent form, PsychoPy
+Figure 5.10: consent form, PsychoPy
 </p>
 </div>
 <p>We’ll put a text component on the top of the consent form asking participants to review the form. The y position is adjusted to shift the text above the consent form image.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
-<img src="images/top_text.png" alt="text component asking participants to review consent, PsychoPy"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<img src="images/top_text.png" alt="text component asking participants to review consent, PsychoPy" width="1010" />
 <p class="caption">
-Figure 5.7: text component asking participants to review consent, PsychoPy
+Figure 5.11: text component asking participants to review consent, PsychoPy
 </p>
 </div>
 <p>Another text component in the bottom of the consent form will used to ask the participants to consent. We will make this text red in order to capture their attention.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
-<img src="images/bottom_text.png" alt="text component describing how to consent, PsychoPy"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
+<img src="images/bottom_text.png" alt="text component describing how to consent, PsychoPy" width="1061" />
 <p class="caption">
-Figure 5.8: text component describing how to consent, PsychoPy
+Figure 5.12: text component describing how to consent, PsychoPy
 </p>
 </div>
 <p>Here we create a keyboard component to register the participant’s response to consent. The default key for leaving the experiment is the escape button, so we will set our keyboard keys to ‘y’ for consenting, and ask participants to press escape if they don’t consent.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
-<img src="images/key_consent.png" alt="keyboard component to consent, PsychoPy"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="images/key_consent.png" alt="keyboard component to consent, PsychoPy" width="1166" />
 <p class="caption">
-Figure 5.9: keyboard component to consent, PsychoPy
+Figure 5.13: keyboard component to consent, PsychoPy
 </p>
 </div>
 <p>Pro: Free</p>
@@ -233,35 +285,35 @@ Figure 5.9: keyboard component to consent, PsychoPy
 </font>
 </style>
 </div>
-<div id="adding-consent-form-through-google-forms" class="section level2">
-<h2><span class="header-section-number">5.3</span> Adding consent form through <a href="https://www.google.ca/forms/about/">Google Forms</a></h2>
+<div id="adding-consent-form-through-google-forms" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Adding consent form through <a href="https://www.google.ca/forms/about/">Google Forms</a><a href="consent-implementing-consent-form-and-demographics.html#adding-consent-form-through-google-forms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sign into Google Forms –&gt; Start a new Blank form</p>
 Q1: Here participants would need to paste their identification code
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
-<img src="images/q1_form.png" alt="identification code, Google Form "  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="images/q1_form.png" alt="identification code, Google Form " width="451" />
 <p class="caption">
-Figure 5.10: identification code, Google Form
+Figure 5.14: identification code, Google Form
 </p>
 </div>
 Q2: You can copy and paste the consent form here or upload the image of the form for easier formatting. Reponse is required to move forward.
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
-<img src="images/q2_form.png" alt="consent form, Qualtrics"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="images/q2_form.png" alt="consent form, Qualtrics" width="1242" />
 <p class="caption">
-Figure 5.11: consent form, Qualtrics
+Figure 5.15: consent form, Qualtrics
 </p>
 </div>
 Q3 and Q4: demographic information as above (age and gender)
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
-<img src="images/q3_q4_form.png" alt="age &amp; gender information, Google Form"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="images/q3_q4_form.png" alt="age &amp; gender information, Google Form" width="440" />
 <p class="caption">
-Figure 5.12: age &amp; gender information, Google Form
+Figure 5.16: age &amp; gender information, Google Form
 </p>
 </div>
 End of survey: ending the survey with the link to the experiment that the participant must click
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
-<img src="images/ending_form.png" alt="end of survey, Google Form"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="images/ending_form.png" alt="end of survey, Google Form" width="1485" />
 <p class="caption">
-Figure 5.13: end of survey, Google Form
+Figure 5.17: end of survey, Google Form
 </p>
 </div>
 <p>Pro: Free. Clean presentation, keeps demographics and consent information separate from data.</p>
